@@ -1,0 +1,69 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1784523946748,
+      "tag": "0000_first_mandroid",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1784531006317,
+      "tag": "0001_groovy_the_phantom",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1784534641395,
+      "tag": "0002_next_tana_nile",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1784536791671,
+      "tag": "0003_many_roughhouse",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1784556939958,
+      "tag": "0004_dry_morlun",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1784610590152,
+      "tag": "0005_unusual_nico_minoru",
+      "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1784618888945,
+      "tag": "0006_nostalgic_red_skull",
+      "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1784620076370,
+      "tag": "0007_ambiguous_dexter_bennett",
+      "breakpoints": true
+    },
+    {
+      "idx": 8,
+      "version": "7",
+      "when": 1784623155435,
+      "tag": "0008_wild_fenris",
+      "breakpoints": true
+    }
+  ]
+}

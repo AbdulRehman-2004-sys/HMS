@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 210 20% 98%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --primary: 172.4 66% 40%; /* Teal 600 equivalent */
+    --primary-foreground: 210 20% 98%;
+
+    --secondary: 215.4 16.3% 46.9%; /* Slate 600 */
+    --secondary-foreground: 210 20% 98%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 84% 4.9%;
+
+    --destructive: 0 84.2% 60.2%; /* Red 600 */
+    --destructive-foreground: 210 40% 98%;
+
+    --success: 142.1 76.2% 36.3%; /* Emerald 600 */
+    --success-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 172.4 66% 40%;
+
+    --radius: 0.375rem; /* Clinical tight borders */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* Printing styles wrapper */
+@media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+  .no-print {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  body {
+    background-color: white !important;
+    color: black !important;
+    font-size: 12pt;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .print-card {
+    border: 1px solid #ccc !important;
+    box-shadow: none !important;
+    page-break-inside: avoid;
+  }
+}
+
+

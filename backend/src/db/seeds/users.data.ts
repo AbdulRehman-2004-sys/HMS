@@ -1,0 +1,60 @@
+export const INITIAL_USERS = [
+  {
+    email: 'zafar.iqbal@lalamedical.com',
+    password: 'password123',
+    firstName: 'Prof Dr. M Zafar',
+    lastName: 'Iqbal',
+    username: 'drzafar',
+    phone: '+923000000001',
+    role: 'Super Admin',
+    secondaryRole: 'Doctor',
+  },
+
+
+
+  {
+    email: 'doctor@lalamedical.com',
+    password: 'password123',
+    firstName: 'John',
+    lastName: 'Doe',
+    username: 'drjohn',
+    phone: '+923001111111',
+    role: 'Doctor',
+  },
+  {
+    email: 'receptionist@lalamedical.com',
+    password: 'password123',
+    firstName: 'Sarah',
+    lastName: 'Connor',
+    username: 'receptionist1',
+    phone: '+923002222222',
+    role: 'Receptionist',
+  },
+  {
+    email: 'lab@lalamedical.com',
+    password: 'password123',
+    firstName: 'Alan',
+    lastName: 'Turing',
+    username: 'labtech1',
+    phone: '+923003333333',
+    role: 'Laboratory',
+  },
+  {
+    email: 'rad@lalamedical.com',
+    password: 'password123',
+    firstName: 'Marie',
+    lastName: 'Curie',
+    username: 'radtech1',
+    phone: '+923004444444',
+    role: 'Radiology',
+  },
+  {
+    email: 'billing@lalamedical.com',
+    password: 'password123',
+    firstName: 'Charles',
+    lastName: 'Babbage',
+    username: 'billingcashier1',
+    phone: '+923005555555',
+    role: 'Billing',
+  },
+];

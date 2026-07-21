@@ -1,0 +1,602 @@
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"error","message":"⚠️ Database connection failed. Please ensure DATABASE_URL is valid and PostgreSQL is running."}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"warn","message":"AuthService database connection failed. Falling back to IN-MEMORY MOCK mode."}
+{"level":"info","message":"Seeded default admin user \"admin@lalamedical.com\" (password: admin123) in memory."}
+{"level":"info","message":"Seeded test user \"doctor@lalamedical.com\" (password: password123) with role \"Doctor\" in memory."}
+{"level":"info","message":"Seeded test user \"receptionist@lalamedical.com\" (password: password123) with role \"Receptionist\" in memory."}
+{"level":"info","message":"Seeded test user \"lab@lalamedical.com\" (password: password123) with role \"Laboratory\" in memory."}
+{"level":"info","message":"Seeded test user \"rad@lalamedical.com\" (password: password123) with role \"Radiology\" in memory."}
+{"level":"info","message":"Seeded test user \"billing@lalamedical.com\" (password: password123) with role \"Billing\" in memory."}
+{"level":"error","message":"💥 Unhandled Exception: Expected property name or '}' in JSON at position 1 (line 1 column 2)","stack":"SyntaxError: Expected property name or '}' in JSON at position 1 (line 1 column 2)\n    at JSON.parse (<anonymous>)\n    at parse (G:\\lala complex\\backend\\node_modules\\body-parser\\lib\\types\\json.js:96:19)\n    at G:\\lala complex\\backend\\node_modules\\body-parser\\lib\\read.js:128:18\n    at AsyncResource.runInAsyncScope (node:async_hooks:226:14)\n    at invokeCallback (G:\\lala complex\\backend\\node_modules\\raw-body\\index.js:238:16)\n    at done (G:\\lala complex\\backend\\node_modules\\raw-body\\index.js:227:7)\n    at IncomingMessage.onEnd (G:\\lala complex\\backend\\node_modules\\raw-body\\index.js:287:7)\n    at IncomingMessage.emit (node:events:509:20)\n    at endReadableNT (node:internal/streams/readable:1746:12)\n    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)"}
+{"level":"warn","message":"POST /api/auth/refresh - 401 - Refresh token is invalid or expired"}
+{"level":"warn","message":"POST /api/auth/refresh - 401 - Refresh token is invalid or expired"}
+{"level":"warn","message":"POST /api/auth/refresh - 401 - Refresh token is invalid or expired"}
+{"level":"warn","message":"POST /api/auth/refresh - 401 - Refresh token is invalid or expired"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"error","message":"⚠️ Database connection failed. Please ensure DATABASE_URL is valid and PostgreSQL is running."}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"error","message":"⚠️ Database connection failed. Please ensure DATABASE_URL is valid and PostgreSQL is running."}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"error","message":"⚠️ Database connection failed. Please ensure DATABASE_URL is valid and PostgreSQL is running."}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"error","message":"⚠️ Database connection failed. Please ensure DATABASE_URL is valid and PostgreSQL is running."}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"error","message":"⚠️ Database connection failed. Please ensure DATABASE_URL is valid and PostgreSQL is running."}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"error","message":"⚠️ Database connection failed. Please ensure DATABASE_URL is valid and PostgreSQL is running."}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"warn","message":"AuthService database connection failed. Falling back to IN-MEMORY MOCK mode."}
+{"level":"info","message":"Seeded default admin user \"admin@lalamedical.com\" (password: admin123) in memory."}
+{"level":"info","message":"Seeded test user \"doctor@lalamedical.com\" (password: password123) with role \"Doctor\" in memory."}
+{"level":"info","message":"Seeded test user \"receptionist@lalamedical.com\" (password: password123) with role \"Receptionist\" in memory."}
+{"level":"info","message":"Seeded test user \"lab@lalamedical.com\" (password: password123) with role \"Laboratory\" in memory."}
+{"level":"info","message":"Seeded test user \"rad@lalamedical.com\" (password: password123) with role \"Radiology\" in memory."}
+{"level":"info","message":"Seeded test user \"billing@lalamedical.com\" (password: password123) with role \"Billing\" in memory."}
+{"level":"warn","message":"POST /api/auth/login - 401 - Invalid email or password"}
+{"level":"warn","message":"PATCH /api/users/user-doctor - 400 - Email address is already registered to another account"}
+{"level":"warn","message":"PATCH /api/users/user-doctor - 400 - Email address is already registered to another account"}
+{"level":"warn","message":"PATCH /api/users/user-doctor - 400 - Email address is already registered to another account"}
+{"level":"warn","message":"GET /api/users/user-1784526671157 - 401 - Access token has expired"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"error","message":"⚠️ Database connection failed. Please ensure DATABASE_URL is valid and PostgreSQL is running."}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"warn","message":"AuthService database connection failed. Falling back to IN-MEMORY MOCK mode."}
+{"level":"info","message":"Seeded default admin user \"admin@lalamedical.com\" (password: admin123) in memory."}
+{"level":"info","message":"Seeded test user \"doctor@lalamedical.com\" (password: password123) with role \"Doctor\" in memory."}
+{"level":"info","message":"Seeded test user \"receptionist@lalamedical.com\" (password: password123) with role \"Receptionist\" in memory."}
+{"level":"info","message":"Seeded test user \"lab@lalamedical.com\" (password: password123) with role \"Laboratory\" in memory."}
+{"level":"info","message":"Seeded test user \"rad@lalamedical.com\" (password: password123) with role \"Radiology\" in memory."}
+{"level":"info","message":"Seeded test user \"billing@lalamedical.com\" (password: password123) with role \"Billing\" in memory."}
+{"level":"warn","message":"POST /api/auth/refresh - 401 - Refresh token is invalid or expired"}
+{"level":"info","message":"Starting database migration process..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"Database migrations completed successfully"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"warn","message":"AuthService database connection failed. Falling back to IN-MEMORY MOCK mode."}
+{"level":"info","message":"Seeded default admin user \"admin@lalamedical.com\" (password: admin123) in memory."}
+{"level":"info","message":"Seeded test user \"doctor@lalamedical.com\" (password: password123) with role \"Doctor\" in memory."}
+{"level":"info","message":"Seeded test user \"receptionist@lalamedical.com\" (password: password123) with role \"Receptionist\" in memory."}
+{"level":"info","message":"Seeded test user \"lab@lalamedical.com\" (password: password123) with role \"Laboratory\" in memory."}
+{"level":"info","message":"Seeded test user \"rad@lalamedical.com\" (password: password123) with role \"Radiology\" in memory."}
+{"level":"info","message":"Seeded test user \"billing@lalamedical.com\" (password: password123) with role \"Billing\" in memory."}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"warn","message":"AuthService database connection failed. Falling back to IN-MEMORY MOCK mode."}
+{"code":"42703","file":"parse_relation.c","length":108,"level":"error","line":"3822","message":"Database connection error in AuthService: column \"username\" does not exist","name":"error","position":"67","routine":"errorMissingColumn","severity":"ERROR","stack":"error: column \"username\" does not exist\n    at G:\\lala complex\\backend\\node_modules\\pg-pool\\index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async <anonymous> (G:\\lala complex\\backend\\node_modules\\src\\node-postgres\\session.ts:66:19)\n    at async AuthService.init (G:\\lala complex\\backend\\src\\features\\auth\\auth.service.ts:74:7)\n    at async AuthService.login (G:\\lala complex\\backend\\src\\features\\auth\\auth.service.ts:230:5)\n    at async <anonymous> (G:\\lala complex\\backend\\src\\features\\auth\\auth.controller.ts:39:49)"}
+{"level":"info","message":"Seeded default admin user \"admin@lalamedical.com\" (password: admin123) in memory."}
+{"level":"info","message":"Seeded test user \"doctor@lalamedical.com\" (password: password123) with role \"Doctor\" in memory."}
+{"level":"info","message":"Seeded test user \"receptionist@lalamedical.com\" (password: password123) with role \"Receptionist\" in memory."}
+{"level":"info","message":"Seeded test user \"lab@lalamedical.com\" (password: password123) with role \"Laboratory\" in memory."}
+{"level":"info","message":"Seeded test user \"rad@lalamedical.com\" (password: password123) with role \"Radiology\" in memory."}
+{"level":"info","message":"Seeded test user \"billing@lalamedical.com\" (password: password123) with role \"Billing\" in memory."}
+{"level":"info","message":"Starting database migration process..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"Database migrations completed successfully"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"AuthService initialized in DATABASE mode."}
+{"level":"info","message":"Seeded role \"Super Admin\" in database."}
+{"level":"info","message":"Seeded role \"Receptionist\" in database."}
+{"level":"info","message":"Seeded role \"Doctor\" in database."}
+{"level":"info","message":"Seeded role \"Laboratory\" in database."}
+{"level":"info","message":"Seeded role \"Radiology\" in database."}
+{"level":"info","message":"Seeded role \"Billing\" in database."}
+{"level":"info","message":"Seeded default admin user \"admin@lalamedical.com\" (password: admin123) in database."}
+{"level":"info","message":"Seeded test user \"doctor@lalamedical.com\" (password: password123) with role \"Doctor\" in database."}
+{"level":"info","message":"Seeded test user \"receptionist@lalamedical.com\" (password: password123) with role \"Receptionist\" in database."}
+{"level":"info","message":"Seeded test user \"lab@lalamedical.com\" (password: password123) with role \"Laboratory\" in database."}
+{"level":"info","message":"Seeded test user \"rad@lalamedical.com\" (password: password123) with role \"Radiology\" in database."}
+{"level":"info","message":"Seeded test user \"billing@lalamedical.com\" (password: password123) with role \"Billing\" in database."}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"client":{"_connected":true,"_connecting":false,"_connectionCallback":null,"_connectionError":false,"_connectionTimeoutMillis":0,"_ended":true,"_ending":true,"_events":{},"_eventsCount":1,"_poolUseCount":1,"_queryQueue":[],"_queryable":false,"_txStatus":"I","_types":{"_types":{"arrayParser":{},"builtins":{"ABSTIME":702,"ACLITEM":1033,"BIT":1560,"BOOL":16,"BPCHAR":1042,"BYTEA":17,"CHAR":18,"CID":29,"CIDR":650,"CIRCLE":718,"DATE":1082,"FLOAT4":700,"FLOAT8":701,"GTSVECTOR":3642,"INET":869,"INT2":21,"INT4":23,"INT8":20,"INTERVAL":1186,"JSON":114,"JSONB":3802,"MACADDR":829,"MACADDR8":774,"MONEY":790,"NUMERIC":1700,"OID":26,"PATH":602,"PG_DEPENDENCIES":3402,"PG_LSN":3220,"PG_NDISTINCT":3361,"PG_NODE_TREE":194,"POLYGON":604,"REFCURSOR":1790,"REGCLASS":2205,"REGCONFIG":3734,"REGDICTIONARY":3769,"REGNAMESPACE":4089,"REGOPER":2203,"REGOPERATOR":2204,"REGPROC":24,"REGPROCEDURE":2202,"REGROLE":4096,"REGTYPE":2206,"RELTIME":703,"SMGR":210,"TEXT":25,"TID":27,"TIME":1083,"TIMESTAMP":1114,"TIMESTAMPTZ":1184,"TIMETZ":1266,"TINTERVAL":704,"TSQUERY":3615,"TSVECTOR":3614,"TXID_SNAPSHOT":2970,"UUID":2950,"VARBIT":1562,"VARCHAR":1043,"XID":28,"XML":142}},"binary":{},"text":{}},"binary":false,"connection":{"_connecting":true,"_emitMessage":false,"_ending":false,"_events":{},"_eventsCount":22,"_keepAlive":false,"_keepAliveInitialDelayMillis":0,"parsedStatements":{},"ssl":{},"sslNegotiation":"postgres","stream":{"_SNICallback":null,"_closeAfterHandlingError":false,"_controlReleased":true,"_events":{"end":[null,null],"newListener":[null,null]},"_eventsCount":6,"_hadError":false,"_host":null,"_newSessionPending":false,"_parent":{"_closeAfterHandlingError":false,"_events":{"close":[null,null,null],"error":[null,null]},"_eventsCount":4,"_hadError":false,"_host":"ep-noisy-band-atkvhsw8-pooler.c-9.us-east-1.aws.neon.tech","_parent":null,"_pendingData":null,"_pendingEncoding":"","_readableState":{"awaitDrainWriters":null,"buffer":[],"bufferIndex":0,"highWaterMark":16384,"length":0,"pipes":[]},"_server":null,"_sockname":null,"_writableState":{"bufferedIndex":0,"corked":0,"highWaterMark":16384,"length":0,"pendingcb":0,"writelen":0},"allowHalfOpen":false,"autoSelectFamilyAttemptedAddresses":["3.220.135.142:5432"],"connecting":false,"server":null},"_pendingData":null,"_pendingEncoding":"","_readableState":{"awaitDrainWriters":null,"buffer":[],"bufferIndex":0,"highWaterMark":16384,"length":0,"pipes":[]},"_rejectUnauthorized":true,"_requestCert":true,"_secureEstablished":true,"_securePending":false,"_server":null,"_sockname":null,"_tlsOptions":{"isServer":false,"pipe":false,"rejectUnauthorized":true,"requestCert":true,"secureContext":{"context":{}}},"_writableState":{"bufferedIndex":0,"corked":0,"highWaterMark":16384,"length":0,"pendingcb":0,"writelen":0},"allowHalfOpen":false,"alpnProtocol":false,"authorizationError":null,"authorized":true,"connecting":false,"encrypted":true,"secureConnecting":false,"servername":"ep-noisy-band-atkvhsw8-pooler.c-9.us-east-1.aws.neon.tech","ssl":null}},"connectionParameters":{"binary":false,"client_encoding":"","connect_timeout":0,"database":"lala_hms_v2","host":"ep-noisy-band-atkvhsw8-pooler.c-9.us-east-1.aws.neon.tech","idle_in_transaction_session_timeout":false,"isDomainSocket":false,"lock_timeout":false,"port":5432,"query_timeout":false,"ssl":{},"statement_timeout":false,"user":"neondb_owner"},"database":"lala_hms_v2","enableChannelBinding":false,"host":"ep-noisy-band-atkvhsw8-pooler.c-9.us-east-1.aws.neon.tech","port":5432,"processID":-1423951467,"readyForQuery":true,"saslSession":null,"scramMaxIterations":100000,"secretKey":-932401517,"ssl":{},"sslNegotiation":"postgres","user":"neondb_owner"},"level":"error","message":"Unexpected error on idle PostgreSQL client Connection terminated unexpectedly","stack":"Error: Connection terminated unexpectedly\n    at Connection.<anonymous> (G:\\lala complex\\backend\\node_modules\\pg\\lib\\client.js:199:73)\n    at Object.onceWrapper (node:events:630:28)\n    at Connection.emit (node:events:509:20)\n    at Socket.<anonymous> (G:\\lala complex\\backend\\node_modules\\pg\\lib\\connection.js:63:12)\n    at Socket.emit (node:events:521:24)\n    at TCP.<anonymous> (node:net:355:12)"}
+{"level":"warn","message":"POST /api/users - 401 - Access token has expired"}
+{"level":"info","message":"AuthService initialized in DATABASE mode."}
+{"level":"warn","message":"POST /api/users - 400 - Email address is already registered"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"AuthService initialized in DATABASE mode."}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"Starting database migration process..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"Database migrations completed successfully"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"Starting database migration process..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"Database migrations completed successfully"}
+{"level":"info","message":"Starting Doctor Seeding Process..."}
+{"level":"info","message":"Cleared existing dummy doctor records."}
+{"level":"info","message":"Seeded doctor: M Zafar Iqbal (Pediatric Surgeon / CEO) - Rs. 1000"}
+{"level":"info","message":"Seeded doctor: Shumaila Irum (APWMO / MS) - Rs. 500"}
+{"level":"info","message":"Starting Doctor Seeding Process..."}
+{"level":"info","message":"Seeded doctor: Noor Ahmed Niazi (Consultant Surgeon) - Rs. 1000"}
+{"level":"info","message":"Seeded doctor: Afsheen Asif (Consultant Gynecologist) - Rs. 1000"}
+{"level":"info","message":"Seeded doctor: Mohtmam Nazir (Consultant General & Laparoscopic Surgeon) - Rs. 1000"}
+{"level":"info","message":"Seeded doctor: Tahir Mehmood (Consultant Surgeon) - Rs. 1000"}
+{"level":"info","message":"Seeded doctor: Anees Ur Rehman (Consultant ENT Surgeon) - Rs. 1000"}
+{"level":"info","message":"Seeded doctor: Amir Hameed (Consultant Orthopedic Surgeon) - Rs. 1000"}
+{"level":"info","message":"Seeded doctor: Sajid Ghafoor (Consultant Oncologist) - Rs. 1000"}
+{"level":"info","message":"Seeded doctor: Syed Abbas Rasool (Consultant Cardiologist) - Rs. 1000"}
+{"level":"info","message":"Cleared existing dummy doctor records."}
+{"level":"info","message":"Seeded doctor: Asif Hussain (Consultant Anesthetist) - Rs. 1000"}
+{"level":"info","message":"Seeded doctor: M Zafar Iqbal (Pediatric Surgeon / CEO) - Rs. 1000"}
+{"level":"info","message":"Seeded doctor: Shumaila Irum (APWMO / MS) - Rs. 500"}
+{"level":"info","message":"Seeded doctor: Noor Ahmed Niazi (Consultant Surgeon) - Rs. 1000"}
+{"level":"info","message":"Seeded doctor: Afsheen Asif (Consultant Gynecologist) - Rs. 1000"}
+{"level":"info","message":"Seeded doctor: Mohtmam Nazir (Consultant General & Laparoscopic Surgeon) - Rs. 1000"}
+{"level":"info","message":"Seeded doctor: Tahir Mehmood (Consultant Surgeon) - Rs. 1000"}
+{"level":"info","message":"Seeded doctor: Anees Ur Rehman (Consultant ENT Surgeon) - Rs. 1000"}
+{"level":"info","message":"Seeded doctor: Amir Hameed (Consultant Orthopedic Surgeon) - Rs. 1000"}
+{"level":"info","message":"Seeded doctor: Sajid Ghafoor (Consultant Oncologist) - Rs. 1000"}
+{"code":"23505","constraint":"doctors_email_unique","detail":"Key (email)=(abbas.rasool@lalamedical.com) already exists.","file":"nbtinsert.c","length":232,"level":"error","line":"667","message":"Failed to seed doctor profiles: duplicate key value violates unique constraint \"doctors_email_unique\"","name":"error","routine":"_bt_check_unique","schema":"public","severity":"ERROR","stack":"error: duplicate key value violates unique constraint \"doctors_email_unique\"\n    at G:\\lala complex\\backend\\node_modules\\pg-pool\\index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async seedDoctors (G:\\lala complex\\backend\\src\\db\\seed-doctors.ts:161:7)","table":"doctors"}
+{"level":"info","message":"🚀 Starting Master Database Seeding Process..."}
+{"level":"info","message":"Seeding Roles Matrix..."}
+{"level":"info","message":"Role \"Super Admin\" already exists."}
+{"level":"info","message":"Role \"Receptionist\" already exists."}
+{"level":"info","message":"Role \"Doctor\" already exists."}
+{"level":"info","message":"Role \"Laboratory\" already exists."}
+{"level":"info","message":"Role \"Radiology\" already exists."}
+{"level":"info","message":"Role \"Billing\" already exists."}
+{"level":"info","message":"Seeding Default Staff Accounts..."}
+{"level":"info","message":"User \"admin@lalamedical.com\" already exists."}
+{"level":"info","message":"User \"doctor@lalamedical.com\" already exists."}
+{"level":"info","message":"User \"receptionist@lalamedical.com\" already exists."}
+{"level":"info","message":"User \"lab@lalamedical.com\" already exists."}
+{"level":"info","message":"User \"rad@lalamedical.com\" already exists."}
+{"level":"info","message":"User \"billing@lalamedical.com\" already exists."}
+{"level":"info","message":"Seeding 11 Real Hospital Doctor Profiles & Availability Schedules..."}
+{"level":"info","message":"Updated existing doctor profile: Dr. M Zafar Iqbal"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Shumaila Irum"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Noor Ahmed Niazi"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Afsheen Asif"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Mohtmam Nazir"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Tahir Mehmood"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Anees Ur Rehman"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Amir Hameed"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Sajid Ghafoor"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Syed Abbas Rasool"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Asif Hussain"}
+{"level":"info","message":"🎉 Master Database Seeding Completed Successfully!"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"AuthService initialized in DATABASE mode."}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"error","message":"💥 Uncaught Exception: listen EADDRINUSE: address already in use :::5000","stack":"Error: listen EADDRINUSE: address already in use :::5000\n    at Server.setupListenHandle [as _listen2] (node:net:2167:16)\n    at listenInCluster (node:net:2224:12)\n    at Server.listen (node:net:2344:7)\n    at app.listen (G:\\lala complex\\backend\\node_modules\\express\\lib\\application.js:635:24)\n    at boot (G:\\lala complex\\backend\\src\\server.ts:14:22)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"client":{"_connected":true,"_connecting":false,"_connectionCallback":null,"_connectionError":false,"_connectionTimeoutMillis":0,"_ended":true,"_ending":true,"_events":{},"_eventsCount":1,"_poolUseCount":1,"_queryQueue":[],"_queryable":false,"_txStatus":"I","_types":{"_types":{"arrayParser":{},"builtins":{"ABSTIME":702,"ACLITEM":1033,"BIT":1560,"BOOL":16,"BPCHAR":1042,"BYTEA":17,"CHAR":18,"CID":29,"CIDR":650,"CIRCLE":718,"DATE":1082,"FLOAT4":700,"FLOAT8":701,"GTSVECTOR":3642,"INET":869,"INT2":21,"INT4":23,"INT8":20,"INTERVAL":1186,"JSON":114,"JSONB":3802,"MACADDR":829,"MACADDR8":774,"MONEY":790,"NUMERIC":1700,"OID":26,"PATH":602,"PG_DEPENDENCIES":3402,"PG_LSN":3220,"PG_NDISTINCT":3361,"PG_NODE_TREE":194,"POLYGON":604,"REFCURSOR":1790,"REGCLASS":2205,"REGCONFIG":3734,"REGDICTIONARY":3769,"REGNAMESPACE":4089,"REGOPER":2203,"REGOPERATOR":2204,"REGPROC":24,"REGPROCEDURE":2202,"REGROLE":4096,"REGTYPE":2206,"RELTIME":703,"SMGR":210,"TEXT":25,"TID":27,"TIME":1083,"TIMESTAMP":1114,"TIMESTAMPTZ":1184,"TIMETZ":1266,"TINTERVAL":704,"TSQUERY":3615,"TSVECTOR":3614,"TXID_SNAPSHOT":2970,"UUID":2950,"VARBIT":1562,"VARCHAR":1043,"XID":28,"XML":142}},"binary":{},"text":{}},"binary":false,"connection":{"_connecting":true,"_emitMessage":false,"_ending":false,"_events":{},"_eventsCount":22,"_keepAlive":false,"_keepAliveInitialDelayMillis":0,"parsedStatements":{},"ssl":{},"sslNegotiation":"postgres","stream":{"_SNICallback":null,"_closeAfterHandlingError":false,"_controlReleased":true,"_events":{"end":[null,null],"newListener":[null,null]},"_eventsCount":6,"_hadError":false,"_host":null,"_newSessionPending":false,"_parent":{"_closeAfterHandlingError":false,"_events":{"close":[null,null,null],"error":[null,null]},"_eventsCount":4,"_hadError":false,"_host":"ep-noisy-band-atkvhsw8-pooler.c-9.us-east-1.aws.neon.tech","_parent":null,"_pendingData":null,"_pendingEncoding":"","_readableState":{"awaitDrainWriters":null,"buffer":[],"bufferIndex":0,"highWaterMark":16384,"length":0,"pipes":[]},"_server":null,"_sockname":null,"_writableState":{"bufferedIndex":0,"corked":0,"highWaterMark":16384,"length":0,"pendingcb":0,"writelen":0},"allowHalfOpen":false,"autoSelectFamilyAttemptedAddresses":["52.45.105.76:5432"],"connecting":false,"server":null},"_pendingData":null,"_pendingEncoding":"","_readableState":{"awaitDrainWriters":null,"buffer":[],"bufferIndex":0,"highWaterMark":16384,"length":0,"pipes":[]},"_rejectUnauthorized":true,"_requestCert":true,"_secureEstablished":true,"_securePending":false,"_server":null,"_sockname":null,"_tlsOptions":{"isServer":false,"pipe":false,"rejectUnauthorized":true,"requestCert":true,"secureContext":{"context":{}}},"_writableState":{"bufferedIndex":0,"corked":0,"highWaterMark":16384,"length":0,"pendingcb":0,"writelen":0},"allowHalfOpen":false,"alpnProtocol":false,"authorizationError":null,"authorized":true,"connecting":false,"encrypted":true,"secureConnecting":false,"servername":"ep-noisy-band-atkvhsw8-pooler.c-9.us-east-1.aws.neon.tech","ssl":null}},"connectionParameters":{"binary":false,"client_encoding":"","connect_timeout":0,"database":"lala_hms_v2","host":"ep-noisy-band-atkvhsw8-pooler.c-9.us-east-1.aws.neon.tech","idle_in_transaction_session_timeout":false,"isDomainSocket":false,"lock_timeout":false,"port":5432,"query_timeout":false,"ssl":{},"statement_timeout":false,"user":"neondb_owner"},"database":"lala_hms_v2","enableChannelBinding":false,"host":"ep-noisy-band-atkvhsw8-pooler.c-9.us-east-1.aws.neon.tech","port":5432,"processID":-275860494,"readyForQuery":true,"saslSession":null,"scramMaxIterations":100000,"secretKey":-1372087573,"ssl":{},"sslNegotiation":"postgres","user":"neondb_owner"},"level":"error","message":"Unexpected error on idle PostgreSQL client Connection terminated unexpectedly","stack":"Error: Connection terminated unexpectedly\n    at Connection.<anonymous> (G:\\lala complex\\backend\\node_modules\\pg\\lib\\client.js:199:73)\n    at Object.onceWrapper (node:events:630:28)\n    at Connection.emit (node:events:509:20)\n    at Socket.<anonymous> (G:\\lala complex\\backend\\node_modules\\pg\\lib\\connection.js:63:12)\n    at Socket.emit (node:events:521:24)\n    at TCP.<anonymous> (node:net:355:12)"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"error","message":"💥 Uncaught Exception: listen EADDRINUSE: address already in use :::5000","stack":"Error: listen EADDRINUSE: address already in use :::5000\n    at Server.setupListenHandle [as _listen2] (node:net:2167:16)\n    at listenInCluster (node:net:2224:12)\n    at Server.listen (node:net:2344:7)\n    at app.listen (G:\\lala complex\\backend\\node_modules\\express\\lib\\application.js:635:24)\n    at boot (G:\\lala complex\\backend\\src\\server.ts:14:22)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)"}
+{"level":"info","message":"AuthService initialized in DATABASE mode."}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"error","message":"💥 Uncaught Exception: listen EADDRINUSE: address already in use :::5000","stack":"Error: listen EADDRINUSE: address already in use :::5000\n    at Server.setupListenHandle [as _listen2] (node:net:2167:16)\n    at listenInCluster (node:net:2224:12)\n    at Server.listen (node:net:2344:7)\n    at app.listen (G:\\lala complex\\backend\\node_modules\\express\\lib\\application.js:635:24)\n    at boot (G:\\lala complex\\backend\\src\\server.ts:14:22)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"error","message":"💥 Uncaught Exception: listen EADDRINUSE: address already in use :::5000","stack":"Error: listen EADDRINUSE: address already in use :::5000\n    at Server.setupListenHandle [as _listen2] (node:net:2167:16)\n    at listenInCluster (node:net:2224:12)\n    at Server.listen (node:net:2344:7)\n    at app.listen (G:\\lala complex\\backend\\node_modules\\express\\lib\\application.js:635:24)\n    at boot (G:\\lala complex\\backend\\src\\server.ts:14:22)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)"}
+{"level":"info","message":"Starting database migration process..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"Database migrations completed successfully"}
+{"level":"info","message":"🚀 Starting Master Database Seeding Process..."}
+{"level":"info","message":"Seeding Roles Matrix..."}
+{"level":"info","message":"Role \"Super Admin\" already exists."}
+{"level":"info","message":"Role \"Receptionist\" already exists."}
+{"level":"info","message":"Role \"Doctor\" already exists."}
+{"level":"info","message":"Role \"Laboratory\" already exists."}
+{"level":"info","message":"Role \"Radiology\" already exists."}
+{"level":"info","message":"Role \"Billing\" already exists."}
+{"level":"info","message":"Seeding Default Staff Accounts..."}
+{"level":"info","message":"User \"admin@lalamedical.com\" already exists."}
+{"level":"info","message":"User \"doctor@lalamedical.com\" already exists."}
+{"level":"info","message":"User \"receptionist@lalamedical.com\" already exists."}
+{"level":"info","message":"User \"lab@lalamedical.com\" already exists."}
+{"level":"info","message":"User \"rad@lalamedical.com\" already exists."}
+{"level":"info","message":"User \"billing@lalamedical.com\" already exists."}
+{"level":"info","message":"Seeding 11 Real Hospital Doctor Profiles & Availability Schedules..."}
+{"level":"info","message":"Updated existing doctor profile: Dr. M Zafar Iqbal"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Shumaila Irum"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Noor Ahmed Niazi"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Afsheen Asif"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Mohtmam Nazir"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Tahir Mehmood"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Anees Ur Rehman"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Amir Hameed"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Sajid Ghafoor"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Syed Abbas Rasool"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Asif Hussain"}
+{"level":"info","message":"Seeding Initial Patient Records..."}
+{"level":"info","message":"Created patient: Muhammad Ali (MRN-202607-0001)"}
+{"level":"info","message":"Created patient: Fatima Noor (MRN-202607-0002)"}
+{"level":"info","message":"Created patient: Usman Ghani (MRN-202607-0003)"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"error","message":"💥 Uncaught Exception: listen EADDRINUSE: address already in use :::5000","stack":"Error: listen EADDRINUSE: address already in use :::5000\n    at Server.setupListenHandle [as _listen2] (node:net:2167:16)\n    at listenInCluster (node:net:2224:12)\n    at Server.listen (node:net:2344:7)\n    at app.listen (G:\\lala complex\\backend\\node_modules\\express\\lib\\application.js:635:24)\n    at boot (G:\\lala complex\\backend\\src\\server.ts:14:22)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"error","message":"💥 Uncaught Exception: listen EADDRINUSE: address already in use :::5000","stack":"Error: listen EADDRINUSE: address already in use :::5000\n    at Server.setupListenHandle [as _listen2] (node:net:2167:16)\n    at listenInCluster (node:net:2224:12)\n    at Server.listen (node:net:2344:7)\n    at app.listen (G:\\lala complex\\backend\\node_modules\\express\\lib\\application.js:635:24)\n    at boot (G:\\lala complex\\backend\\src\\server.ts:14:22)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"error","message":"💥 Uncaught Exception: listen EADDRINUSE: address already in use :::5000","stack":"Error: listen EADDRINUSE: address already in use :::5000\n    at Server.setupListenHandle [as _listen2] (node:net:2167:16)\n    at listenInCluster (node:net:2224:12)\n    at Server.listen (node:net:2344:7)\n    at app.listen (G:\\lala complex\\backend\\node_modules\\express\\lib\\application.js:635:24)\n    at boot (G:\\lala complex\\backend\\src\\server.ts:14:22)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"error","message":"💥 Uncaught Exception: listen EADDRINUSE: address already in use :::5000","stack":"Error: listen EADDRINUSE: address already in use :::5000\n    at Server.setupListenHandle [as _listen2] (node:net:2167:16)\n    at listenInCluster (node:net:2224:12)\n    at Server.listen (node:net:2344:7)\n    at app.listen (G:\\lala complex\\backend\\node_modules\\express\\lib\\application.js:635:24)\n    at boot (G:\\lala complex\\backend\\src\\server.ts:14:22)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"error","message":"⚠️ Database connection failed. Please ensure DATABASE_URL is valid and PostgreSQL is running."}
+{"level":"error","message":"💥 Uncaught Exception: listen EADDRINUSE: address already in use :::5000","stack":"Error: listen EADDRINUSE: address already in use :::5000\n    at Server.setupListenHandle [as _listen2] (node:net:2167:16)\n    at listenInCluster (node:net:2224:12)\n    at Server.listen (node:net:2344:7)\n    at app.listen (G:\\lala complex\\backend\\node_modules\\express\\lib\\application.js:635:24)\n    at boot (G:\\lala complex\\backend\\src\\server.ts:14:22)\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)"}
+{"level":"warn","message":"AuthService database connection failed. Falling back to IN-MEMORY MOCK mode."}
+{"code":"ENOTFOUND","errno":-3008,"hostname":"ep-noisy-band-atkvhsw8-pooler.c-9.us-east-1.aws.neon.tech","level":"error","message":"Database connection error in AuthService: getaddrinfo ENOTFOUND ep-noisy-band-atkvhsw8-pooler.c-9.us-east-1.aws.neon.tech","stack":"Error: getaddrinfo ENOTFOUND ep-noisy-band-atkvhsw8-pooler.c-9.us-east-1.aws.neon.tech\n    at G:\\lala complex\\backend\\node_modules\\pg-pool\\index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async <anonymous> (G:\\lala complex\\backend\\node_modules\\src\\node-postgres\\session.ts:66:19)\n    at async AuthService.init (G:\\lala complex\\backend\\src\\features\\auth\\auth.service.ts:64:7)\n    at async AuthService.refresh (G:\\lala complex\\backend\\src\\features\\auth\\auth.service.ts:414:5)\n    at async <anonymous> (G:\\lala complex\\backend\\src\\features\\auth\\auth.controller.ts:62:60)","syscall":"getaddrinfo"}
+{"level":"info","message":"Seeded default admin user \"admin@lalamedical.com\" (password: admin123) in memory."}
+{"level":"info","message":"Seeded test user \"doctor@lalamedical.com\" (password: password123) with role \"Doctor\" in memory."}
+{"level":"info","message":"Seeded test user \"receptionist@lalamedical.com\" (password: password123) with role \"Receptionist\" in memory."}
+{"level":"info","message":"Seeded test user \"lab@lalamedical.com\" (password: password123) with role \"Laboratory\" in memory."}
+{"level":"info","message":"Seeded test user \"rad@lalamedical.com\" (password: password123) with role \"Radiology\" in memory."}
+{"level":"info","message":"Seeded test user \"billing@lalamedical.com\" (password: password123) with role \"Billing\" in memory."}
+{"level":"warn","message":"POST /api/auth/refresh - 401 - Refresh token is invalid or expired"}
+{"level":"warn","message":"GET /api/patients?page=1&limit=8 - 401 - Access token has expired"}
+{"level":"warn","message":"PATCH /api/patients/pat-1001 - 401 - Access token has expired"}
+{"level":"warn","message":"GET /api/patients?page=1&limit=8 - 401 - Access token has expired"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"AuthService initialized in DATABASE mode."}
+{"level":"error","message":"💥 Unhandled Exception: column patient_visits.doctor_id does not exist","stack":"error: column patient_visits.doctor_id does not exist\n    at G:\\lala complex\\backend\\node_modules\\pg-pool\\index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async <anonymous> (G:\\lala complex\\backend\\node_modules\\src\\node-postgres\\session.ts:66:19)\n    at async VisitRepository.getNextTokenNumber (G:\\lala complex\\backend\\src\\features\\visits\\visits.repository.ts:61:24)\n    at async VisitRepository.create (G:\\lala complex\\backend\\src\\features\\visits\\visits.repository.ts:90:25)\n    at async VisitService.createVisit (G:\\lala complex\\backend\\src\\features\\visits\\visits.service.ts:29:19)\n    at async <anonymous> (G:\\lala complex\\backend\\src\\features\\visits\\visits.controller.ts:31:19)"}
+{"level":"info","message":"🚀 Starting Master Database Seeding Process..."}
+{"level":"info","message":"Seeding Roles Matrix..."}
+{"level":"info","message":"Role \"Super Admin\" already exists."}
+{"level":"info","message":"Role \"Receptionist\" already exists."}
+{"level":"info","message":"Role \"Doctor\" already exists."}
+{"level":"info","message":"Role \"Laboratory\" already exists."}
+{"level":"info","message":"Role \"Radiology\" already exists."}
+{"level":"info","message":"Role \"Billing\" already exists."}
+{"level":"info","message":"Seeding Default Staff Accounts..."}
+{"level":"info","message":"User \"admin@lalamedical.com\" already exists."}
+{"level":"info","message":"User \"doctor@lalamedical.com\" already exists."}
+{"level":"info","message":"User \"receptionist@lalamedical.com\" already exists."}
+{"level":"info","message":"User \"lab@lalamedical.com\" already exists."}
+{"level":"info","message":"User \"rad@lalamedical.com\" already exists."}
+{"level":"info","message":"User \"billing@lalamedical.com\" already exists."}
+{"level":"info","message":"Seeding 11 Real Hospital Doctor Profiles & Availability Schedules..."}
+{"level":"info","message":"Updated existing doctor profile: Dr. M Zafar Iqbal"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Shumaila Irum"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Noor Ahmed Niazi"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Afsheen Asif"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Mohtmam Nazir"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Tahir Mehmood"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Anees Ur Rehman"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Amir Hameed"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Sajid Ghafoor"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Syed Abbas Rasool"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Asif Hussain"}
+{"level":"info","message":"Seeding Initial Patient Records..."}
+{"level":"info","message":"Patient \"MRN-202607-0001\" already exists."}
+{"level":"info","message":"Patient \"MRN-202607-0002\" already exists."}
+{"level":"info","message":"Patient \"MRN-202607-0003\" already exists."}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"AuthService initialized in DATABASE mode."}
+{"level":"error","message":"💥 Unhandled Exception: column patient_visits.doctor_id does not exist","stack":"error: column patient_visits.doctor_id does not exist\n    at G:\\lala complex\\backend\\node_modules\\pg-pool\\index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async <anonymous> (G:\\lala complex\\backend\\node_modules\\src\\node-postgres\\session.ts:66:19)\n    at async VisitRepository.getNextTokenNumber (G:\\lala complex\\backend\\src\\features\\visits\\visits.repository.ts:61:24)\n    at async VisitRepository.create (G:\\lala complex\\backend\\src\\features\\visits\\visits.repository.ts:90:25)\n    at async VisitService.createVisit (G:\\lala complex\\backend\\src\\features\\visits\\visits.service.ts:29:19)\n    at async <anonymous> (G:\\lala complex\\backend\\src\\features\\visits\\visits.controller.ts:31:19)"}
+{"level":"info","message":"Starting database migration process..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"Database migrations completed successfully"}
+{"level":"info","message":"🚀 Starting Master Database Seeding Process..."}
+{"level":"info","message":"Seeding Roles Matrix..."}
+{"level":"info","message":"Role \"Super Admin\" already exists."}
+{"level":"info","message":"Role \"Receptionist\" already exists."}
+{"level":"info","message":"Role \"Doctor\" already exists."}
+{"level":"info","message":"Role \"Laboratory\" already exists."}
+{"level":"info","message":"Role \"Radiology\" already exists."}
+{"level":"info","message":"Role \"Billing\" already exists."}
+{"level":"info","message":"Seeding Default Staff Accounts..."}
+{"level":"info","message":"User \"admin@lalamedical.com\" already exists."}
+{"level":"info","message":"User \"doctor@lalamedical.com\" already exists."}
+{"level":"info","message":"User \"receptionist@lalamedical.com\" already exists."}
+{"level":"info","message":"User \"lab@lalamedical.com\" already exists."}
+{"level":"info","message":"User \"rad@lalamedical.com\" already exists."}
+{"level":"info","message":"User \"billing@lalamedical.com\" already exists."}
+{"level":"info","message":"Seeding 11 Real Hospital Doctor Profiles & Availability Schedules..."}
+{"level":"info","message":"Updated existing doctor profile: Dr. M Zafar Iqbal"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Shumaila Irum"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Noor Ahmed Niazi"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Afsheen Asif"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Mohtmam Nazir"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Tahir Mehmood"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Anees Ur Rehman"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Amir Hameed"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Sajid Ghafoor"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Syed Abbas Rasool"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Asif Hussain"}
+{"level":"info","message":"Seeding Initial Patient Records..."}
+{"level":"info","message":"Patient \"MRN-202607-0001\" already exists."}
+{"level":"info","message":"Patient \"MRN-202607-0002\" already exists."}
+{"level":"info","message":"Patient \"MRN-202607-0003\" already exists."}
+{"level":"warn","message":"GET /api/doctors?limit=100 - 403 - You do not have permission to access this resource"}
+{"level":"warn","message":"GET /api/doctors?limit=100 - 403 - You do not have permission to access this resource"}
+{"level":"warn","message":"GET /api/doctors?limit=100 - 403 - You do not have permission to access this resource"}
+{"level":"warn","message":"GET /api/doctors?limit=100 - 403 - You do not have permission to access this resource"}
+{"level":"warn","message":"GET /api/doctors?limit=100 - 403 - You do not have permission to access this resource"}
+{"level":"warn","message":"GET /api/doctors?limit=100 - 403 - You do not have permission to access this resource"}
+{"level":"warn","message":"GET /api/doctors?limit=100 - 403 - You do not have permission to access this resource"}
+{"level":"warn","message":"GET /api/doctors?limit=100 - 403 - You do not have permission to access this resource"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"AuthService initialized in DATABASE mode."}
+{"level":"warn","message":"GET /api/doctors?limit=100 - 403 - You do not have permission to access this resource"}
+{"level":"warn","message":"GET /api/doctors?limit=100 - 403 - You do not have permission to access this resource"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"AuthService initialized in DATABASE mode."}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"AuthService initialized in DATABASE mode."}
+{"level":"info","message":"🚀 Starting Master Database Seeding Process..."}
+{"level":"info","message":"Seeding Roles Matrix..."}
+{"level":"info","message":"Role \"Super Admin\" already exists."}
+{"level":"info","message":"Role \"Receptionist\" already exists."}
+{"level":"info","message":"Role \"Doctor\" already exists."}
+{"level":"info","message":"Role \"Laboratory\" already exists."}
+{"level":"info","message":"Role \"Radiology\" already exists."}
+{"level":"info","message":"Role \"Billing\" already exists."}
+{"level":"info","message":"Seeding Default Staff Accounts..."}
+{"level":"info","message":"User \"admin@lalamedical.com\" already exists."}
+{"level":"info","message":"User \"doctor@lalamedical.com\" already exists."}
+{"level":"info","message":"User \"receptionist@lalamedical.com\" already exists."}
+{"level":"info","message":"User \"lab@lalamedical.com\" already exists."}
+{"level":"info","message":"User \"rad@lalamedical.com\" already exists."}
+{"level":"info","message":"User \"billing@lalamedical.com\" already exists."}
+{"level":"info","message":"Seeding 11 Real Hospital Doctor Profiles & Availability Schedules..."}
+{"level":"info","message":"Updated existing doctor profile: Dr. M Zafar Iqbal"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Shumaila Irum"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Noor Ahmed Niazi"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Afsheen Asif"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Mohtmam Nazir"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Tahir Mehmood"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Anees Ur Rehman"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Amir Hameed"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Sajid Ghafoor"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Syed Abbas Rasool"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Asif Hussain"}
+{"level":"info","message":"Seeding Initial Patient Records..."}
+{"level":"info","message":"Patient \"MRN-202607-0001\" already exists."}
+{"level":"info","message":"Patient \"MRN-202607-0002\" already exists."}
+{"level":"info","message":"Patient \"MRN-202607-0003\" already exists."}
+{"level":"info","message":"🚀 Starting Master Database Seeding Process..."}
+{"level":"info","message":"Seeding Roles Matrix..."}
+{"level":"info","message":"Role \"Super Admin\" already exists."}
+{"level":"info","message":"Role \"Receptionist\" already exists."}
+{"level":"info","message":"Role \"Doctor\" already exists."}
+{"level":"info","message":"Role \"Laboratory\" already exists."}
+{"level":"info","message":"Role \"Radiology\" already exists."}
+{"level":"info","message":"Role \"Billing\" already exists."}
+{"level":"info","message":"Seeding Default Staff Accounts..."}
+{"level":"info","message":"User \"admin@lalamedical.com\" updated."}
+{"level":"info","message":"🚀 Starting Master Database Seeding Process..."}
+{"level":"info","message":"Seeding Roles Matrix..."}
+{"level":"info","message":"Role \"Super Admin\" already exists."}
+{"level":"info","message":"Role \"Receptionist\" already exists."}
+{"level":"info","message":"Role \"Doctor\" already exists."}
+{"level":"info","message":"Role \"Laboratory\" already exists."}
+{"level":"info","message":"Role \"Radiology\" already exists."}
+{"level":"info","message":"Role \"Billing\" already exists."}
+{"level":"info","message":"Seeding Default Staff Accounts..."}
+{"level":"info","message":"User \"admin@lalamedical.com\" updated."}
+{"level":"info","message":"User \"doctor@lalamedical.com\" updated."}
+{"level":"info","message":"User \"receptionist@lalamedical.com\" updated."}
+{"level":"info","message":"User \"lab@lalamedical.com\" updated."}
+{"level":"info","message":"User \"rad@lalamedical.com\" updated."}
+{"level":"info","message":"User \"billing@lalamedical.com\" updated."}
+{"level":"info","message":"Seeding 11 Real Hospital Doctor Profiles & Availability Schedules..."}
+{"level":"info","message":"Updated existing doctor profile: Dr. M Zafar Iqbal"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Shumaila Irum"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Noor Ahmed Niazi"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Afsheen Asif"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Mohtmam Nazir"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Tahir Mehmood"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Anees Ur Rehman"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Amir Hameed"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Sajid Ghafoor"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Syed Abbas Rasool"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Asif Hussain"}
+{"level":"info","message":"Seeding Initial Patient Records..."}
+{"level":"info","message":"Patient \"MRN-202607-0001\" already exists."}
+{"level":"info","message":"Patient \"MRN-202607-0002\" already exists."}
+{"level":"info","message":"Patient \"MRN-202607-0003\" already exists."}
+{"level":"info","message":"🚀 Starting Master Database Seeding Process..."}
+{"level":"info","message":"Seeding Roles Matrix..."}
+{"level":"info","message":"Role \"Super Admin\" already exists."}
+{"level":"info","message":"Role \"Receptionist\" already exists."}
+{"level":"info","message":"Role \"Doctor\" already exists."}
+{"level":"info","message":"Role \"Laboratory\" already exists."}
+{"level":"info","message":"Role \"Radiology\" already exists."}
+{"level":"info","message":"Role \"Billing\" already exists."}
+{"level":"info","message":"Seeding Default Staff Accounts..."}
+{"level":"info","message":"User \"admin@lalamedical.com\" updated."}
+{"level":"info","message":"User \"zafar.iqbal@lalamedical.com\" updated."}
+{"level":"info","message":"User \"doctor@lalamedical.com\" updated."}
+{"level":"info","message":"User \"receptionist@lalamedical.com\" updated."}
+{"level":"info","message":"User \"lab@lalamedical.com\" updated."}
+{"level":"info","message":"User \"rad@lalamedical.com\" updated."}
+{"level":"info","message":"User \"billing@lalamedical.com\" updated."}
+{"level":"info","message":"Seeding 11 Real Hospital Doctor Profiles & Availability Schedules..."}
+{"level":"info","message":"Updated existing doctor profile: Dr. M Zafar Iqbal"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Shumaila Irum"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Noor Ahmed Niazi"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Afsheen Asif"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Mohtmam Nazir"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Tahir Mehmood"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Anees Ur Rehman"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Amir Hameed"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Sajid Ghafoor"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Syed Abbas Rasool"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Asif Hussain"}
+{"level":"info","message":"Seeding Initial Patient Records..."}
+{"level":"info","message":"Patient \"MRN-202607-0001\" already exists."}
+{"level":"info","message":"Patient \"MRN-202607-0002\" already exists."}
+{"level":"info","message":"Patient \"MRN-202607-0003\" already exists."}
+{"level":"error","message":"💥 Unhandled Exception: Connection terminated unexpectedly","stack":"Error: Connection terminated unexpectedly\n    at G:\\lala complex\\backend\\node_modules\\pg-pool\\index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async <anonymous> (G:\\lala complex\\backend\\node_modules\\src\\node-postgres\\session.ts:66:19)\n    at async DoctorRepository.findMany (G:\\lala complex\\backend\\src\\features\\doctors\\doctors.repository.ts:300:29)\n    at async <anonymous> (G:\\lala complex\\backend\\src\\features\\doctors\\doctors.controller.ts:49:20)"}
+{"level":"info","message":"🚀 Starting Master Database Seeding Process..."}
+{"level":"info","message":"Seeding Roles Matrix..."}
+{"level":"info","message":"Role \"Super Admin\" already exists."}
+{"level":"info","message":"Role \"Receptionist\" already exists."}
+{"level":"info","message":"Role \"Doctor\" already exists."}
+{"level":"info","message":"Role \"Laboratory\" already exists."}
+{"level":"info","message":"Role \"Radiology\" already exists."}
+{"level":"info","message":"Role \"Billing\" already exists."}
+{"level":"info","message":"Seeding Default Staff Accounts..."}
+{"level":"info","message":"User \"zafar.iqbal@lalamedical.com\" updated."}
+{"level":"info","message":"User \"doctor@lalamedical.com\" updated."}
+{"level":"info","message":"User \"receptionist@lalamedical.com\" updated."}
+{"level":"info","message":"User \"lab@lalamedical.com\" updated."}
+{"level":"info","message":"User \"rad@lalamedical.com\" updated."}
+{"level":"info","message":"User \"billing@lalamedical.com\" updated."}
+{"level":"info","message":"Seeding 11 Real Hospital Doctor Profiles & Availability Schedules..."}
+{"level":"info","message":"Updated existing doctor profile: Dr. M Zafar Iqbal"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Shumaila Irum"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Noor Ahmed Niazi"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Afsheen Asif"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Mohtmam Nazir"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Tahir Mehmood"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Anees Ur Rehman"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Amir Hameed"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Sajid Ghafoor"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Syed Abbas Rasool"}
+{"level":"info","message":"Updated existing doctor profile: Dr. Asif Hussain"}
+{"level":"info","message":"Seeding Initial Patient Records..."}
+{"level":"info","message":"Patient \"MRN-202607-0001\" already exists."}
+{"level":"info","message":"Patient \"MRN-202607-0002\" already exists."}
+{"level":"info","message":"Patient \"MRN-202607-0003\" already exists."}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"Starting database migration process..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"Database migrations completed successfully"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"warn","message":"GET /api/prescriptions/visit/f141b750-628e-40cd-81af-42753134c8db - 401 - Access token has expired"}
+{"level":"warn","message":"GET /api/prescriptions/visit/f141b750-628e-40cd-81af-42753134c8db - 401 - Access token has expired"}
+{"level":"info","message":"AuthService initialized in DATABASE mode."}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"AuthService initialized in DATABASE mode."}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"Starting database migration process..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"Database migrations completed successfully"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"AuthService initialized in DATABASE mode."}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"Starting database migration process..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"Database migrations completed successfully"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"warn","message":"GET /api/prescriptions/visit/f141b750-628e-40cd-81af-42753134c8db - 401 - Access token has expired"}
+{"level":"warn","message":"GET /api/orders/visit/f141b750-628e-40cd-81af-42753134c8db - 401 - Access token has expired"}
+{"level":"warn","message":"GET /api/lab/reports/visit/f141b750-628e-40cd-81af-42753134c8db - 401 - Access token has expired"}
+{"level":"warn","message":"GET /api/prescriptions/visit/f141b750-628e-40cd-81af-42753134c8db - 401 - Access token has expired"}
+{"level":"warn","message":"GET /api/orders/visit/f141b750-628e-40cd-81af-42753134c8db - 401 - Access token has expired"}
+{"level":"warn","message":"GET /api/lab/reports/visit/f141b750-628e-40cd-81af-42753134c8db - 401 - Access token has expired"}
+{"level":"info","message":"AuthService initialized in DATABASE mode."}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
