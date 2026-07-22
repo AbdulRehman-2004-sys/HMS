@@ -46,7 +46,7 @@ export class DoctorService {
     // 3. Business Rule: Standard consultation fee fallback
     const doctorData: CreateDoctorDTO = {
       ...data,
-      consultationFee: data.consultationFee || 500,
+      consultationFee: data.consultationFee || 1000,
     };
 
     const newDoctor = await DoctorRepository.create(doctorData);

@@ -10,7 +10,7 @@ export const createDoctorSchema = z.object({
   specialization: z.string().min(1, 'Specialization is required'),
   experience: z.coerce.number().min(0, 'Experience must be a positive number'),
   gender: z.string().min(1, 'Gender is required'),
-  consultationFee: z.coerce.number().min(0, 'Consultation fee must be a positive number').optional().default(500),
+  consultationFee: z.coerce.number().min(0, 'Consultation fee must be a positive number').optional().default(1000),
   registrationNumber: z.string().optional(),
   signatureText: z.string().optional(),
 });

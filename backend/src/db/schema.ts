@@ -100,6 +100,16 @@ export * from '../features/patients/patients.schema';
 export * from '../features/patients/prescriptions.schema';
 export * from '../features/orders/orders.schema';
 export * from '../features/lab/lab.schema';
+export * from '../features/radiology/radiology.schema';
+export * from '../features/admissions/admissions.schema';
+export * from '../features/operations/operations.schema';
+export * from '../features/billing/billing.schema';
+export * from '../features/settings/settings.schema';
+export * from '../features/appointments/appointments.schema';
+
+
+
+
 
 
 

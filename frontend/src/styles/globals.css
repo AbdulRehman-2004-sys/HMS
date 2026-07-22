@@ -46,29 +46,67 @@
   }
 }
 
+/* Custom Scrollbars */
+.no-scrollbar::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+.no-scrollbar {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+}
+
+.sidebar-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: #334155 #0f172a;
+}
+.sidebar-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.sidebar-scroll::-webkit-scrollbar-track {
+  background: #0f172a !important;
+}
+.sidebar-scroll::-webkit-scrollbar-thumb {
+  background: #334155 !important;
+  border-radius: 9999px;
+}
+.sidebar-scroll::-webkit-scrollbar-thumb:hover {
+  background: #475569 !important;
+}
+
 /* Printing styles wrapper */
 @media print {
   * {
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
     color-adjust: exact !important;
+    box-shadow: none !important;
   }
-  .no-print {
+  html, body, #__next, main, section, article, div {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
+    position: static !important;
+    float: none !important;
+  }
+  .no-print, header, nav, aside, button {
     display: none !important;
     visibility: hidden !important;
   }
   body {
     background-color: white !important;
     color: black !important;
-    font-size: 12pt;
+    font-size: 11pt;
     margin: 0 !important;
     padding: 0 !important;
   }
-  .print-card {
-    border: 1px solid #ccc !important;
+  .print-card, .visit-card {
+    border: 1px solid #cbd5e1 !important;
     box-shadow: none !important;
-    page-break-inside: avoid;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    margin-bottom: 1rem !important;
   }
 }
-
-

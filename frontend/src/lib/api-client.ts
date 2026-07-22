@@ -73,8 +73,11 @@ api.interceptors.response.use(
       } catch (refreshError) {
         setAccessToken(null);
         
-        // Force redirect to login page if window is defined
-        if (typeof window !== 'undefined') {
+        // Force redirect to login page only if inside protected dashboard routes
+        if (
+          typeof window !== 'undefined' &&
+          window.location.pathname.startsWith('/dashboard')
+        ) {
           window.location.href = '/login?expired=true';
         }
         return Promise.reject(refreshError);

@@ -64,6 +64,34 @@
       "when": 1784623155435,
       "tag": "0008_wild_fenris",
       "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "7",
+      "when": 1784642814193,
+      "tag": "0009_empty_kabuki",
+      "breakpoints": true
+    },
+    {
+      "idx": 10,
+      "version": "7",
+      "when": 1784646889146,
+      "tag": "0010_unknown_silk_fever",
+      "breakpoints": true
+    },
+    {
+      "idx": 11,
+      "version": "7",
+      "when": 1784648550700,
+      "tag": "0011_greedy_susan_delgado",
+      "breakpoints": true
+    },
+    {
+      "idx": 12,
+      "version": "7",
+      "when": 1784653076508,
+      "tag": "0012_flashy_azazel",
+      "breakpoints": true
     }
   ]
 }

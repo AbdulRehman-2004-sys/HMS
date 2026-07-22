@@ -1,6 +1,5 @@
-'use client';
-
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { getHospitalSettingsApi } from '../lib/settings';
 
 export interface RegistrationSlipProps {
   hospitalName?: string;
@@ -17,7 +16,7 @@ export interface RegistrationSlipProps {
 }
 
 export const RegistrationSlip: React.FC<RegistrationSlipProps> = ({
-  hospitalName = 'LALA MEDICAL COMPLEX',
+  hospitalName: initialHospitalName,
   patientName,
   mrNumber,
   age,
@@ -29,6 +28,20 @@ export const RegistrationSlip: React.FC<RegistrationSlipProps> = ({
   address,
   city,
 }) => {
+  const [dynHospitalName, setDynHospitalName] = useState(initialHospitalName || 'LALA MEDICAL COMPLEX');
+
+  useEffect(() => {
+    if (!initialHospitalName) {
+      getHospitalSettingsApi()
+        .then((res) => {
+          if (res.hospitalName) setDynHospitalName(res.hospitalName.toUpperCase());
+        })
+        .catch(() => {});
+    }
+  }, [initialHospitalName]);
+
+  const hospitalName = dynHospitalName;
+
   const formattedDate = new Date(registrationDate).toLocaleString('en-PK', {
     dateStyle: 'medium',
     timeStyle: 'short',

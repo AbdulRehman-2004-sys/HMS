@@ -25,7 +25,15 @@ import {
   Activity,
   User,
   UserCheck,
+  Calendar,
+  Clock,
+  CheckCircle2,
 } from 'lucide-react';
+import {
+  getPendingCheckinAppointmentsApi,
+  checkinOnlineAppointmentApi,
+  AppointmentRecord,
+} from '../../../lib/appointments';
 
 interface PatientItem {
   id: string;
@@ -73,6 +81,10 @@ const BLOOD_GROUPS = ['A+', 'A-', 'B+', 'B-', 'O+', 'O-', 'AB+', 'AB-', 'Unknown
 export default function PatientsPage() {
   const queryClient = useQueryClient();
 
+  // Tab state & Online Appointments Check-in state
+  const [activeTab, setActiveTab] = useState<'registered' | 'online_pending'>('registered');
+  const [onlineCheckinLoadingId, setOnlineCheckinLoadingId] = useState<string | null>(null);
+
   // Search & Filter state
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedGender, setSelectedGender] = useState('');
@@ -89,6 +101,59 @@ export default function PatientsPage() {
   const [formError, setFormError] = useState<string | null>(null);
   const [formSuccess, setFormSuccess] = useState<string | null>(null);
   const [createLoading, setCreateLoading] = useState(false);
+
+  // Query online pending appointments
+  const {
+    data: pendingAptsData,
+    isLoading: pendingAptsLoading,
+    refetch: refetchPendingApts,
+  } = useQuery<AppointmentRecord[]>({
+    queryKey: ['pending-appointments', searchTerm],
+    queryFn: () => getPendingCheckinAppointmentsApi(searchTerm),
+  });
+
+  const pendingAppointmentsList = pendingAptsData || [];
+
+  const handleOnlineCheckin = async (apt: AppointmentRecord) => {
+    setOnlineCheckinLoadingId(apt.id);
+    setFormError(null);
+    setFormSuccess(null);
+
+    try {
+      const result = await checkinOnlineAppointmentApi(apt.id);
+
+      // Invalidate queries
+      queryClient.invalidateQueries({ queryKey: ['patients'] });
+      refetchPendingApts();
+
+      // Automatically open thermal registration slip modal for printout
+      setPrintPatient({
+        id: result.patient.id,
+        mrNumber: result.patient.mrNumber,
+        firstName: result.patient.fullName.split(' ')[0] || 'Patient',
+        lastName: result.patient.fullName.split(' ').slice(1).join(' ') || '',
+        fullName: result.patient.fullName,
+        fatherHusbandName: apt.fatherHusbandName,
+        gender: apt.gender,
+        age: apt.age,
+        mobileNumber: result.patient.phone || apt.phone,
+        address: apt.address,
+        city: 'Sargodha',
+        isActive: true,
+        isDeleted: false,
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString(),
+      });
+
+      setFormSuccess(
+        `Patient checked in successfully! Assigned MRN: ${result.patient.mrNumber}, Queue Token: ${result.visit.tokenNumber}`
+      );
+    } catch (err: any) {
+      setFormError(err.response?.data?.error?.message || err.message || 'Failed to check in online appointment');
+    } finally {
+      setOnlineCheckinLoadingId(null);
+    }
+  };
 
 
   // Form fields
@@ -241,8 +306,142 @@ export default function PatientsPage() {
           )}
         </div>
 
-        {/* Filter and Search Bar */}
-        <div className="bg-white rounded-lg border border-slate-200 shadow-sm p-4 flex flex-col md:flex-row gap-3 items-center justify-between">
+        {/* Navigation Tabs */}
+        <div className="flex items-center gap-2 border-b border-slate-200">
+          <button
+            onClick={() => setActiveTab('registered')}
+            className={`px-4 py-2.5 text-xs font-bold transition-all border-b-2 ${
+              activeTab === 'registered'
+                ? 'border-teal-600 text-teal-600 bg-white'
+                : 'border-transparent text-slate-500 hover:text-slate-800 hover:bg-slate-50'
+            } rounded-t-lg flex items-center gap-2`}
+          >
+            <UserCheck className="h-4 w-4" />
+            <span>Master Patient Index ({pagination.total})</span>
+          </button>
+
+          <button
+            onClick={() => setActiveTab('online_pending')}
+            className={`px-4 py-2.5 text-xs font-bold transition-all border-b-2 ${
+              activeTab === 'online_pending'
+                ? 'border-teal-600 text-teal-600 bg-white'
+                : 'border-transparent text-slate-500 hover:text-slate-800 hover:bg-slate-50'
+            } rounded-t-lg flex items-center gap-2`}
+          >
+            <Calendar className="h-4 w-4 text-teal-600" />
+            <span>Online Pending Check-ins</span>
+            {pendingAppointmentsList.length > 0 && (
+              <span className="px-2 py-0.5 text-[10px] font-black bg-teal-600 text-white rounded-full">
+                {pendingAppointmentsList.length}
+              </span>
+            )}
+          </button>
+        </div>
+
+        {activeTab === 'online_pending' ? (
+          <div className="space-y-4">
+            {/* Search Bar for Pending Appointments */}
+            <div className="bg-white rounded-lg border border-slate-200 shadow-sm p-4 flex flex-col md:flex-row gap-3 items-center justify-between">
+              <div className="relative w-full md:w-96">
+                <Search className="absolute left-3 top-2.5 h-4 w-4 text-slate-400" />
+                <input
+                  type="text"
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  placeholder="Search appointment #, patient name, or phone..."
+                  className="w-full pl-9 pr-4 py-2 text-xs border border-slate-200 rounded-md outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition-all placeholder:text-slate-400"
+                />
+              </div>
+
+              <div className="text-xs text-slate-500 font-semibold">
+                Online bookings automatically sync into this queue for reception check-in.
+              </div>
+            </div>
+
+            {/* Pending Appointments Table */}
+            <div className="bg-white rounded-lg border border-slate-200 shadow-sm overflow-hidden">
+              {pendingAptsLoading ? (
+                <div className="flex flex-col items-center justify-center p-12 text-slate-400 gap-3">
+                  <Loader2 className="h-8 w-8 animate-spin text-teal-600" />
+                  <span className="text-xs font-medium">Loading online pending appointments...</span>
+                </div>
+              ) : pendingAppointmentsList.length > 0 ? (
+                <div className="overflow-x-auto">
+                  <table className="w-full text-left border-collapse">
+                    <thead>
+                      <tr className="border-b border-slate-200 bg-slate-50 text-[11px] font-bold text-slate-500 uppercase tracking-wider">
+                        <th className="px-4 py-3">Appointment #</th>
+                        <th className="px-4 py-3">Patient Name / Father</th>
+                        <th className="px-4 py-3">Age / Gender</th>
+                        <th className="px-4 py-3">Phone</th>
+                        <th className="px-4 py-3">Doctor & Dept</th>
+                        <th className="px-4 py-3">Appt Date</th>
+                        <th className="px-4 py-3">Status</th>
+                        <th className="px-4 py-3 text-right">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-slate-100 text-xs">
+                      {pendingAppointmentsList.map((apt) => (
+                        <tr key={apt.id} className="hover:bg-slate-50/60 transition-colors">
+                          <td className="px-4 py-3 font-mono font-bold text-teal-700">
+                            {apt.appointmentNumber}
+                          </td>
+                          <td className="px-4 py-3">
+                            <strong className="text-slate-900 block">{apt.patientName}</strong>
+                            <span className="text-[11px] text-slate-500 block">S/O, W/O: {apt.fatherHusbandName}</span>
+                          </td>
+                          <td className="px-4 py-3 text-slate-700">
+                            {apt.age} Yrs / {apt.gender}
+                          </td>
+                          <td className="px-4 py-3 font-mono text-slate-700">
+                            {apt.phone}
+                          </td>
+                          <td className="px-4 py-3">
+                            <strong className="text-slate-800 block">{apt.doctorName || 'Specialist'}</strong>
+                            <span className="text-[10px] text-teal-700 bg-teal-50 px-1.5 py-0.5 rounded font-mono border border-teal-200 inline-block mt-0.5">
+                              {apt.department}
+                            </span>
+                          </td>
+                          <td className="px-4 py-3 font-mono text-slate-700">
+                            {apt.appointmentDate}
+                          </td>
+                          <td className="px-4 py-3">
+                            <span className="px-2 py-0.5 bg-amber-50 text-amber-700 border border-amber-200 text-[10px] font-extrabold rounded font-mono uppercase">
+                              PENDING CHECK-IN
+                            </span>
+                          </td>
+                          <td className="px-4 py-3 text-right">
+                            <button
+                              onClick={() => handleOnlineCheckin(apt)}
+                              disabled={onlineCheckinLoadingId === apt.id}
+                              className="px-3 py-1.5 bg-teal-600 hover:bg-teal-700 text-white font-bold text-xs rounded-md shadow-sm transition-colors inline-flex items-center gap-1.5 disabled:opacity-50"
+                            >
+                              {onlineCheckinLoadingId === apt.id ? (
+                                <Loader2 className="h-3.5 w-3.5 animate-spin" />
+                              ) : (
+                                <CheckCircle2 className="h-3.5 w-3.5" />
+                              )}
+                              <span>Check In</span>
+                            </button>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              ) : (
+                <div className="p-12 text-center text-slate-500 text-xs space-y-1">
+                  <Calendar className="h-8 w-8 text-slate-400 mx-auto mb-2 opacity-40" />
+                  <p className="font-bold text-slate-800">No Online Pending Check-ins</p>
+                  <p>When patients book online appointments from the public website, they will appear here instantly for one-click reception check-in.</p>
+                </div>
+              )}
+            </div>
+          </div>
+        ) : (
+          <div className="space-y-6">
+            {/* Filter and Search Bar */}
+            <div className="bg-white rounded-lg border border-slate-200 shadow-sm p-4 flex flex-col md:flex-row gap-3 items-center justify-between">
           <div className="relative w-full md:w-96">
             <Search className="absolute left-3 top-2.5 h-4 w-4 text-slate-400" />
             <input
@@ -429,6 +628,8 @@ export default function PatientsPage() {
             </>
           )}
         </div>
+      </div>
+    )}
 
         {/* Modal Drawer: Register New Patient */}
         {showCreateModal && (

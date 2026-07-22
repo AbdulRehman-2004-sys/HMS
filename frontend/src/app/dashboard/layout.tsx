@@ -19,26 +19,41 @@ import {
   Activity,
   ShieldCheck,
   Stethoscope,
+  Bed,
+  History,
+  BarChart3,
+  Settings,
 } from 'lucide-react';
+import { getHospitalSettingsApi, HospitalSettings } from '../../lib/settings';
 
 const navItems = [
   { name: 'Dashboard Overview', href: '/dashboard', icon: LayoutDashboard, permission: null },
   { name: 'User Management', href: '/dashboard/users', icon: ShieldCheck, permission: Permission.MANAGE_SYSTEM },
   { name: 'Doctor Management', href: '/dashboard/doctors', icon: Stethoscope, permission: Permission.ACCESS_RECEPTION },
-  { name: 'Patient Registration', href: '/dashboard/patients', icon: Users, permission: Permission.ACCESS_RECEPTION },
   { name: 'Clinical EHR', href: '/dashboard/clinical', icon: UserCheck, permission: Permission.ACCESS_CLINICAL },
+  { name: 'Patient Registration', href: '/dashboard/patients', icon: Users, permission: Permission.ACCESS_RECEPTION },
+  { name: 'Patient History', href: '/dashboard/history', icon: History, permission: Permission.VIEW_PATIENT_HISTORY },
   { name: 'Laboratory', href: '/dashboard/lab', icon: FlaskConical, permission: Permission.ACCESS_LAB },
-
   { name: 'Radiology PACS', href: '/dashboard/radiology', icon: FileText, permission: Permission.ACCESS_RADIOLOGY },
+  { name: 'Inpatient Admissions', href: '/dashboard/admissions', icon: Bed, permission: Permission.ACCESS_RECEPTION },
   { name: 'Billing & Cashier', href: '/dashboard/billing', icon: CreditCard, permission: Permission.ACCESS_BILLING },
+  { name: 'Reports & Analytics', href: '/dashboard/reports', icon: BarChart3, permission: Permission.VIEW_REPORTS },
+  { name: 'Hospital Settings', href: '/dashboard/settings', icon: Settings, permission: Permission.MANAGE_SETTINGS },
 ];
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
   const router = useRouter();
   const pathname = usePathname();
   const [user, setUser] = useState<{ firstName: string; lastName: string; roles: string[]; email: string; permissions: string[] } | null>(null);
+  const [hospitalSettings, setHospitalSettings] = useState<HospitalSettings | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [authChecking, setAuthChecking] = useState(true);
+
+  useEffect(() => {
+    getHospitalSettingsApi()
+      .then(setHospitalSettings)
+      .catch(() => {});
+  }, []);
 
   useEffect(() => {
     const checkSession = async () => {
@@ -113,17 +128,23 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
   const primaryRole = user?.roles?.[0] || 'Clinical Staff';
 
   return (
-    <div className="h-screen flex bg-slate-50 overflow-hidden">
+    <div className="h-screen flex bg-slate-50 overflow-hidden print:h-auto print:overflow-visible print:bg-white">
       {/* 1. Desktop Sidebar */}
-      <aside className="hidden lg:flex lg:flex-col lg:w-64 lg:shrink-0 h-screen sticky top-0 bg-slate-900 border-r border-slate-800 text-slate-400">
+      <aside className="hidden lg:flex lg:flex-col lg:w-64 lg:shrink-0 h-screen sticky top-0 bg-slate-900 border-r border-slate-800 text-slate-400 no-print">
         {/* Branding header */}
-        <div className="h-16 flex items-center px-6 border-b border-slate-800 gap-2">
-          <Activity className="h-5 w-5 text-teal-500" />
-          <span className="font-bold text-white tracking-wide text-sm">LALA Medical Complex</span>
+        <div className="h-16 flex items-center px-4 border-b border-slate-800 gap-2 overflow-hidden">
+          {hospitalSettings?.hospitalLogo ? (
+            <img src={hospitalSettings.hospitalLogo} alt="Logo" className="h-7 w-7 object-contain rounded shrink-0 bg-white/10 p-0.5" />
+          ) : (
+            <Activity className="h-5 w-5 text-teal-500 shrink-0" />
+          )}
+          <span className="font-bold text-white tracking-wide text-sm truncate">
+            {hospitalSettings?.hospitalName || 'LALA Medical Complex'}
+          </span>
         </div>
         
         {/* Navigation Area */}
-        <nav className="flex-1 py-4 px-3 overflow-y-auto space-y-1">
+        <nav className="flex-1 py-4 px-3 overflow-y-auto sidebar-scroll space-y-1">
           {visibleNavItems.map((item, index) => {
             const Icon = item.icon;
             const isCurrent = item.href === pathname;
@@ -258,7 +279,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
         )}
 
         {/* 4. Core Content Viewport */}
-        <main className="flex-1 overflow-y-auto p-4 lg:p-6 focus:outline-none">
+        <main className="flex-1 overflow-y-auto print:overflow-visible print:h-auto p-4 lg:p-6 focus:outline-none">
           {children}
         </main>
       </div>

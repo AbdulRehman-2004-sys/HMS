@@ -600,3 +600,179 @@
 {"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
 {"level":"info","message":"Database connection established successfully"}
 {"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"AuthService initialized in DATABASE mode."}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"Starting database migration process..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"Database migrations completed successfully"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"AuthService initialized in DATABASE mode."}
+{"level":"info","message":"Starting database migration process..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"Database migrations completed successfully"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"AuthService initialized in DATABASE mode."}
+{"level":"error","message":"💥 Unhandled Exception: Client network socket disconnected before secure TLS connection was established","stack":"Error: Client network socket disconnected before secure TLS connection was established\n    at G:\\lala complex\\backend\\node_modules\\pg-pool\\index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async <anonymous> (G:\\lala complex\\backend\\node_modules\\src\\node-postgres\\session.ts:66:19)\n    at async RadiologyRepository.getRadiologyReportsByVisit (G:\\lala complex\\backend\\src\\features\\radiology\\radiology.repository.ts:313:23)\n    at async RadiologyService.getReportsByVisit (G:\\lala complex\\backend\\src\\features\\radiology\\radiology.service.ts:89:12)\n    at async <anonymous> (G:\\lala complex\\backend\\src\\features\\radiology\\radiology.controller.ts:54:21)"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"Starting database migration process..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"Database migrations completed successfully"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"AuthService initialized in DATABASE mode."}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"Starting database migration process..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"Database migrations completed successfully"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"AuthService initialized in DATABASE mode."}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"AuthService initialized in DATABASE mode."}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"error","message":"⚠️ Database connection failed. Please ensure DATABASE_URL is valid and PostgreSQL is running."}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"AuthService initialized in DATABASE mode."}
+{"level":"warn","message":"GET /api/history/search?mrNumber=MRN-202607-0003 - 401 - Access token has expired"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"warn","message":"GET /api/settings/hospital - 401 - Access token has expired"}
+{"level":"warn","message":"GET /api/settings/hospital - 401 - Access token has expired"}
+{"level":"warn","message":"GET /api/reports/patient - 401 - Access token has expired"}
+{"level":"warn","message":"GET /api/reports/patient - 401 - Access token has expired"}
+{"level":"info","message":"AuthService initialized in DATABASE mode."}
+{"level":"error","message":"💥 Unhandled Exception: relation \"hospital_settings\" does not exist","stack":"error: relation \"hospital_settings\" does not exist\n    at G:\\lala complex\\backend\\node_modules\\pg-pool\\index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async <anonymous> (G:\\lala complex\\backend\\node_modules\\src\\node-postgres\\session.ts:66:19)\n    at async SettingsRepository.getSettings (G:\\lala complex\\backend\\src\\features\\settings\\settings.repository.ts:27:20)\n    at async <anonymous> (G:\\lala complex\\backend\\src\\features\\settings\\settings.controller.ts:16:18)"}
+{"level":"error","message":"💥 Unhandled Exception: relation \"hospital_settings\" does not exist","stack":"error: relation \"hospital_settings\" does not exist\n    at G:\\lala complex\\backend\\node_modules\\pg-pool\\index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async <anonymous> (G:\\lala complex\\backend\\node_modules\\src\\node-postgres\\session.ts:66:19)\n    at async SettingsRepository.getSettings (G:\\lala complex\\backend\\src\\features\\settings\\settings.repository.ts:27:20)\n    at async <anonymous> (G:\\lala complex\\backend\\src\\features\\settings\\settings.controller.ts:16:18)"}
+{"level":"warn","message":"GET /api/settings/hospital - 401 - Access token is missing or invalid format"}
+{"level":"warn","message":"GET /api/settings/hospital - 401 - Access token is missing or invalid format"}
+{"level":"error","message":"💥 Unhandled Exception: relation \"hospital_settings\" does not exist","stack":"error: relation \"hospital_settings\" does not exist\n    at G:\\lala complex\\backend\\node_modules\\pg-pool\\index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async <anonymous> (G:\\lala complex\\backend\\node_modules\\src\\node-postgres\\session.ts:66:19)\n    at async SettingsRepository.getSettings (G:\\lala complex\\backend\\src\\features\\settings\\settings.repository.ts:27:20)\n    at async <anonymous> (G:\\lala complex\\backend\\src\\features\\settings\\settings.controller.ts:16:18)"}
+{"level":"error","message":"💥 Unhandled Exception: relation \"hospital_settings\" does not exist","stack":"error: relation \"hospital_settings\" does not exist\n    at G:\\lala complex\\backend\\node_modules\\pg-pool\\index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async <anonymous> (G:\\lala complex\\backend\\node_modules\\src\\node-postgres\\session.ts:66:19)\n    at async SettingsRepository.getSettings (G:\\lala complex\\backend\\src\\features\\settings\\settings.repository.ts:27:20)\n    at async <anonymous> (G:\\lala complex\\backend\\src\\features\\settings\\settings.controller.ts:16:18)"}
+{"level":"error","message":"💥 Unhandled Exception: relation \"hospital_settings\" does not exist","stack":"error: relation \"hospital_settings\" does not exist\n    at G:\\lala complex\\backend\\node_modules\\pg-pool\\index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async <anonymous> (G:\\lala complex\\backend\\node_modules\\src\\node-postgres\\session.ts:66:19)\n    at async SettingsRepository.getSettings (G:\\lala complex\\backend\\src\\features\\settings\\settings.repository.ts:27:20)\n    at async <anonymous> (G:\\lala complex\\backend\\src\\features\\settings\\settings.controller.ts:16:18)"}
+{"level":"error","message":"💥 Unhandled Exception: relation \"hospital_settings\" does not exist","stack":"error: relation \"hospital_settings\" does not exist\n    at G:\\lala complex\\backend\\node_modules\\pg-pool\\index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\n    at async <anonymous> (G:\\lala complex\\backend\\node_modules\\src\\node-postgres\\session.ts:66:19)\n    at async SettingsRepository.getSettings (G:\\lala complex\\backend\\src\\features\\settings\\settings.repository.ts:27:20)\n    at async <anonymous> (G:\\lala complex\\backend\\src\\features\\settings\\settings.controller.ts:16:18)"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"warn","message":"GET /api/settings/hospital - 401 - Access token is missing or invalid format"}
+{"level":"warn","message":"GET /api/settings/hospital - 401 - Access token is missing or invalid format"}
+{"level":"info","message":"AuthService initialized in DATABASE mode."}
+{"level":"warn","message":"GET /api/settings/hospital - 401 - Access token is missing or invalid format"}
+{"level":"warn","message":"GET /api/settings/hospital - 401 - Access token is missing or invalid format"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"warn","message":"GET /api/settings/hospital - 401 - Access token is missing or invalid format"}
+{"level":"warn","message":"GET /api/settings/hospital - 401 - Access token is missing or invalid format"}
+{"level":"warn","message":"GET /api/settings/hospital - 401 - Access token is missing or invalid format"}
+{"level":"warn","message":"GET /api/settings/hospital - 401 - Access token is missing or invalid format"}
+{"level":"warn","message":"GET /api/settings/hospital - 401 - Access token is missing or invalid format"}
+{"level":"warn","message":"GET /api/settings/hospital - 401 - Access token is missing or invalid format"}
+{"level":"warn","message":"GET /api/settings/hospital - 401 - Access token is missing or invalid format"}
+{"level":"warn","message":"POST /api/auth/refresh - 401 - Refresh token is invalid or expired"}
+{"level":"warn","message":"GET /api/settings/hospital - 401 - Access token is missing or invalid format"}
+{"level":"warn","message":"POST /api/auth/refresh - 401 - Refresh token is invalid or expired"}
+{"level":"info","message":"AuthService initialized in DATABASE mode."}
+{"level":"warn","message":"GET /api/settings/hospital - 401 - Access token is missing or invalid format"}
+{"level":"warn","message":"GET /api/settings/hospital - 401 - Access token is missing or invalid format"}
+{"level":"warn","message":"GET /api/settings/hospital - 401 - Access token is missing or invalid format"}
+{"level":"warn","message":"GET /api/settings/hospital - 401 - Access token is missing or invalid format"}
+{"level":"warn","message":"GET /api/settings/hospital - 401 - Access token is missing or invalid format"}
+{"level":"warn","message":"GET /api/settings/hospital - 401 - Access token is missing or invalid format"}
+{"level":"warn","message":"GET /api/settings/hospital - 401 - Access token is missing or invalid format"}
+{"level":"warn","message":"GET /api/settings/hospital - 401 - Access token is missing or invalid format"}
+{"level":"warn","message":"POST /api/auth/refresh - 401 - Refresh token is invalid or expired"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"warn","message":"GET /api/settings/hospital - 401 - Access token is missing or invalid format"}
+{"level":"warn","message":"GET /api/settings/hospital - 401 - Access token is missing or invalid format"}
+{"level":"warn","message":"GET /api/settings/hospital - 401 - Access token is missing or invalid format"}
+{"level":"warn","message":"GET /api/settings/hospital - 401 - Access token is missing or invalid format"}
+{"level":"info","message":"AuthService initialized in DATABASE mode."}
+{"level":"warn","message":"POST /api/auth/refresh - 401 - Refresh token is invalid or expired"}
+{"level":"warn","message":"GET /api/settings/hospital - 401 - Access token is missing or invalid format"}
+{"level":"warn","message":"GET /api/settings/hospital - 401 - Access token is missing or invalid format"}
+{"level":"warn","message":"GET /api/settings/hospital - 401 - Access token is missing or invalid format"}
+{"level":"warn","message":"GET /api/settings/hospital - 401 - Access token is missing or invalid format"}
+{"level":"warn","message":"POST /api/auth/refresh - 401 - Refresh token is invalid or expired"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}
+{"level":"info","message":"Initializing LALA Medical Complex HMS API Backend..."}
+{"level":"info","message":"Database connection established successfully"}
+{"level":"info","message":"🚀 Server running in [development] mode on http://localhost:5000"}

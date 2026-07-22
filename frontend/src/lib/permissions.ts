@@ -24,4 +24,14 @@ export enum Permission {
   // Billing
   ACCESS_BILLING = 'access:billing',
   MANAGE_INVOICES = 'manage:invoices',
+
+  // History
+  VIEW_PATIENT_HISTORY = 'view:patient_history',
+
+  // Dashboard & Reports
+  VIEW_DASHBOARD = 'view:dashboard',
+  VIEW_REPORTS = 'view:reports',
+
+  // Hospital Settings
+  MANAGE_SETTINGS = 'manage:settings',
 }

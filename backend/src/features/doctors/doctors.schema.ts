@@ -12,7 +12,7 @@ export const doctors = pgTable('doctors', {
   specialization: varchar('specialization', { length: 100 }).notNull(),
   experience: integer('experience').notNull(), // Years of experience
   gender: varchar('gender', { length: 20 }).notNull(),
-  consultationFee: integer('consultation_fee').notNull().default(500),
+  consultationFee: integer('consultation_fee').notNull().default(1000),
   registrationNumber: varchar('registration_number', { length: 100 }), // Optional PMDC Reg No.
   signatureText: text('signature_text'), // Optional signature text
   headerText: text('header_text'), // Optional prescription header text

@@ -1,6 +1,6 @@
 import bcrypt from 'bcryptjs';
 import { db } from './connection';
-import { roles, users, userRoles, doctors, doctorAvailabilities, patients } from './schema';
+import { roles, users, userRoles, doctors, doctorAvailabilities, patients, hospitalSettings } from './schema';
 import { INITIAL_ROLES } from './seeds/roles.data';
 import { INITIAL_USERS } from './seeds/users.data';
 import { INITIAL_DOCTORS } from './seeds/doctors.data';
@@ -191,6 +191,22 @@ async function seedDatabase() {
         patientMap[pat.mrNumber] = insertedPat.id;
         logger.info(`Created patient: ${pat.firstName} ${pat.lastName} (${pat.mrNumber})`);
       }
+    }
+
+    // 5. Seed Hospital Settings Profile
+    logger.info('Seeding Central Hospital Settings Profile...');
+    const existingSettings = await db.select().from(hospitalSettings).limit(1);
+    if (existingSettings.length === 0) {
+      await db.insert(hospitalSettings).values({
+        hospitalName: 'LALA Medical Complex',
+        hospitalLogo: null,
+        address: 'Main Stadium Road, Sargodha, Punjab, Pakistan',
+        contactNumber: '+92 300 1234567',
+        email: 'info@lalamedical.com',
+      });
+      logger.info('Created central hospital settings profile.');
+    } else {
+      logger.info('Hospital settings profile already exists.');
     }
 
     logger.info('🎉 Master Database Seeding Completed Successfully!');

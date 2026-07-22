@@ -25,6 +25,11 @@ import {
   VisitOrdersSummary,
 } from '../lib/orders';
 import { getLabReportsByVisitApi, LabReportData } from '../lib/lab';
+import { getRadiologyReportsByVisitApi, RadiologyReportData } from '../lib/radiology';
+import { createOperationApi } from '../lib/operations';
+import { getHospitalSettingsApi, HospitalSettings } from '../lib/settings';
+
+
 
 import {
   Printer,
@@ -77,6 +82,14 @@ const COMMON_RADIOLOGY_TESTS = [
 
 export const EMRScreen: React.FC<EMRScreenProps> = ({ emrData, onClose, onStatusUpdated }) => {
   const { visit, pastVisits } = emrData;
+  const [hospitalSettings, setHospitalSettings] = useState<HospitalSettings | null>(null);
+
+  useEffect(() => {
+    getHospitalSettingsApi()
+      .then(setHospitalSettings)
+      .catch(() => {});
+  }, []);
+
   const [activeTab, setActiveTab] = useState<'orders' | 'history' | 'prescriptions' | 'lab' | 'radiology'>('orders');
   const [clinicalNotes, setClinicalNotes] = useState(visit.clinicalNotes || '');
   const [savingNotes, setSavingNotes] = useState(false);
@@ -101,6 +114,7 @@ export const EMRScreen: React.FC<EMRScreenProps> = ({ emrData, onClose, onStatus
     operationOrders: [],
   });
   const [visitLabReports, setVisitLabReports] = useState<LabReportData[]>([]);
+  const [visitRadiologyReports, setVisitRadiologyReports] = useState<RadiologyReportData[]>([]);
   const [selectedLabs, setSelectedLabs] = useState<string[]>([]);
   const [selectedRads, setSelectedRads] = useState<Array<{ name: string; modality: RadiologyModality }>>([]);
   const [requestAdmission, setRequestAdmission] = useState(false);
@@ -108,8 +122,11 @@ export const EMRScreen: React.FC<EMRScreenProps> = ({ emrData, onClose, onStatus
   const [admissionType, setAdmissionType] = useState<AdmissionType>(AdmissionType.EMERGENCY);
   const [requestOperation, setRequestOperation] = useState(false);
   const [operationName, setOperationName] = useState('');
+  const [operationCharges, setOperationCharges] = useState<string>('20000');
   const [operationUrgency, setOperationUrgency] = useState<OrderUrgency>(OrderUrgency.ELECTIVE);
+
   const [anesthesiaType, setAnesthesiaType] = useState<AnesthesiaType>(AnesthesiaType.GENERAL);
+
   const [submittingOrders, setSubmittingOrders] = useState(false);
   const [orderMsg, setOrderMsg] = useState('');
 
@@ -132,14 +149,15 @@ export const EMRScreen: React.FC<EMRScreenProps> = ({ emrData, onClose, onStatus
   const isZafar = visit.doctorName.toLowerCase().includes('zafar');
   const isShumaila = visit.doctorName.toLowerCase().includes('shumaila');
 
-  // Load Existing e-Prescription, Orders & Lab Reports
+  // Load Existing e-Prescription, Orders, Lab Reports & Radiology Reports
   useEffect(() => {
     async function loadData() {
       try {
-        const [existingRx, ordersSummary, reports] = await Promise.all([
+        const [existingRx, ordersSummary, labReports, radReports] = await Promise.all([
           getPrescriptionByVisitApi(visit.id),
           getOrdersByVisitApi(visit.id),
           getLabReportsByVisitApi(visit.id),
+          getRadiologyReportsByVisitApi(visit.id),
         ]);
 
         if (existingRx) {
@@ -157,8 +175,12 @@ export const EMRScreen: React.FC<EMRScreenProps> = ({ emrData, onClose, onStatus
           setVisitOrders(ordersSummary);
         }
 
-        if (reports) {
-          setVisitLabReports(reports);
+        if (labReports) {
+          setVisitLabReports(labReports);
+        }
+
+        if (radReports) {
+          setVisitRadiologyReports(radReports);
         }
       } catch (err) {
         console.error('Failed to load EMR data', err);
@@ -167,19 +189,21 @@ export const EMRScreen: React.FC<EMRScreenProps> = ({ emrData, onClose, onStatus
     loadData();
   }, [visit.id]);
 
-
   const refreshOrders = async () => {
     try {
-      const [summary, reports] = await Promise.all([
+      const [summary, labReports, radReports] = await Promise.all([
         getOrdersByVisitApi(visit.id),
         getLabReportsByVisitApi(visit.id),
+        getRadiologyReportsByVisitApi(visit.id),
       ]);
       setVisitOrders(summary);
-      setVisitLabReports(reports);
+      setVisitLabReports(labReports);
+      setVisitRadiologyReports(radReports);
     } catch (err) {
       console.error('Failed to refresh orders and reports', err);
     }
   };
+
 
 
   const showAlert = (title: string, message: string) => {
@@ -281,19 +305,31 @@ export const EMRScreen: React.FC<EMRScreenProps> = ({ emrData, onClose, onStatus
         );
       }
 
-      // Create Operation Order if requested
+      // Create Operation Order & Operation Record if requested
       if (requestOperation && operationName.trim().length > 0) {
-        promises.push(
-          createOperationOrderApi({
+        const opOrderPromise = createOperationOrderApi({
+          visitId: visit.id,
+          patientId: visit.patientId,
+          doctorId: visit.doctorId,
+          procedureName: operationName,
+          urgency: operationUrgency,
+          anesthesiaType,
+        }).then(async (opOrder) => {
+          await createOperationApi({
             visitId: visit.id,
             patientId: visit.patientId,
             doctorId: visit.doctorId,
-            procedureName: operationName,
+            operationName,
+            operationCharges: Number(operationCharges),
             urgency: operationUrgency,
-            anesthesiaType,
-          })
-        );
+            operationOrderId: opOrder.id,
+            notes: `Anesthesia Type: ${anesthesiaType}`,
+          });
+        });
+
+        promises.push(opOrderPromise);
       }
+
 
       if (promises.length === 0) {
         showAlert('No Orders Selected', 'Please select at least one lab test, radiology scan, admission, or operation order to submit.');
@@ -524,16 +560,16 @@ export const EMRScreen: React.FC<EMRScreenProps> = ({ emrData, onClose, onStatus
                 
                 {/* Header Left: Red Title Box & Urdu Address */}
                 <div className="col-span-5 sm:col-span-4 flex flex-col">
-                  <div className="bg-red-600 text-white p-2.5 sm:p-3 rounded-none shadow-sm flex flex-col justify-center items-center text-center">
-                    <h1 className="text-lg sm:text-2xl font-black tracking-tight leading-none uppercase font-sans">
-                      LALA MEDICAL
+                  <div className="bg-red-600 text-white p-2 sm:p-2.5 rounded-none shadow-sm flex items-center gap-2 justify-center text-center">
+                    {hospitalSettings?.hospitalLogo && (
+                      <img src={hospitalSettings.hospitalLogo} alt="Logo" className="h-10 max-w-[50px] object-contain bg-white/20 p-0.5 rounded" />
+                    )}
+                    <h1 className="text-base sm:text-xl font-black tracking-tight leading-none uppercase font-sans">
+                      {hospitalSettings?.hospitalName || 'LALA MEDICAL COMPLEX'}
                     </h1>
-                    <h2 className="text-base sm:text-xl font-black tracking-wider leading-none uppercase mt-1 font-sans">
-                      COMPLEX
-                    </h2>
                   </div>
-                  <div className="bg-slate-900 text-amber-300 text-[10px] sm:text-[11px] text-center font-bold py-1 px-1 tracking-wide mt-0.5">
-                    ایئرپورٹ روڈ بستی امانت علی رحیم یار خان
+                  <div className="bg-slate-900 text-amber-300 text-[10px] sm:text-[11px] text-center font-bold py-1 px-1 tracking-wide mt-0.5 truncate">
+                    {hospitalSettings?.address || 'ایئرپورٹ روڈ بستی امانت علی رحیم یار خان'}
                   </div>
                 </div>
 
@@ -1148,7 +1184,7 @@ export const EMRScreen: React.FC<EMRScreenProps> = ({ emrData, onClose, onStatus
                               className="w-full p-1.5 border border-slate-300 rounded text-xs bg-slate-50 font-medium"
                             />
                           </div>
-                          <div className="grid grid-cols-2 gap-2">
+                          <div className="grid grid-cols-3 gap-2">
                             <div>
                               <label className="block text-[10px] font-bold text-slate-500 uppercase mb-0.5">Urgency</label>
                               <select
@@ -1174,9 +1210,21 @@ export const EMRScreen: React.FC<EMRScreenProps> = ({ emrData, onClose, onStatus
                                 <option value={AnesthesiaType.SEDATION}>Sedation</option>
                               </select>
                             </div>
+                            <div>
+                              <label className="block text-[10px] font-bold text-slate-500 uppercase mb-0.5">Charges (PKR)</label>
+                              <input
+                                type="number"
+                                value={operationCharges}
+                                onChange={(e) => setOperationCharges(e.target.value)}
+                                min={0}
+                                className="w-full p-1.5 border border-slate-300 rounded text-xs bg-slate-50 font-bold text-emerald-800"
+                              />
+
+                            </div>
                           </div>
                         </div>
                       )}
+
                     </div>
 
                   </div>
@@ -1472,28 +1520,93 @@ export const EMRScreen: React.FC<EMRScreenProps> = ({ emrData, onClose, onStatus
 
 
             {activeTab === 'radiology' && (
-              <div className="space-y-2">
+              <div className="space-y-4">
                 {visitOrders.radiologyOrders.length === 0 ? (
                   <div className="text-center py-6 bg-slate-50 rounded border border-dashed border-slate-200">
                     <FileText className="h-6 w-6 text-slate-400 mx-auto mb-2" />
                     <p className="text-xs text-slate-500 font-medium">No radiology imaging orders found for this visit.</p>
                   </div>
                 ) : (
-                  <div className="space-y-2">
-                    {visitOrders.radiologyOrders.map((r) => (
-                      <div key={r.id} className="p-3 bg-slate-50 border border-slate-200 rounded text-xs flex justify-between items-center">
-                        <div>
-                          <strong className="text-slate-900">{r.procedureName}</strong> ({r.modality})
+                  <div className="space-y-3">
+                    {/* Orders Status Grid */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                      {visitOrders.radiologyOrders.map((r) => (
+                        <div key={r.id} className="p-2.5 bg-slate-50 border border-slate-200 rounded text-xs flex justify-between items-center">
+                          <div>
+                            <strong className="text-slate-900">{r.procedureName}</strong>
+                            <span className="text-[10px] text-indigo-700 bg-indigo-50 px-1 py-0.5 rounded ml-1 border border-indigo-200 font-bold">{r.modality}</span>
+                          </div>
+                          <span className={`text-[10px] font-bold px-2 py-0.5 rounded uppercase ${
+                            r.status === 'COMPLETED' ? 'bg-emerald-100 text-emerald-800 border border-emerald-300' :
+                            r.status === 'IN_PROGRESS' ? 'bg-indigo-100 text-indigo-800 border border-indigo-300' :
+                            'bg-amber-100 text-amber-800 border border-amber-300'
+                          }`}>
+                            {r.status}
+                          </span>
                         </div>
-                        <span className="bg-amber-100 text-amber-800 text-[10px] font-bold px-2 py-0.5 rounded uppercase">
-                          {r.status}
-                        </span>
+                      ))}
+                    </div>
+
+                    {/* Released Radiology Diagnostic Reports */}
+                    {visitRadiologyReports.length > 0 && (
+                      <div className="pt-2 space-y-4">
+                        <h4 className="text-xs font-bold text-slate-800 uppercase border-b border-slate-200 pb-1">
+                          Released Imaging Reports ({visitRadiologyReports.length})
+                        </h4>
+
+                        {visitRadiologyReports.map((report) => (
+                          <div key={report.id} className="bg-white border border-indigo-200 rounded-xl shadow-sm overflow-hidden text-xs">
+                            {/* Report Header */}
+                            <div className="bg-indigo-50/70 border-b border-indigo-100 p-3 flex flex-wrap items-center justify-between gap-2">
+                              <div>
+                                <span className="font-bold text-slate-900 text-sm">{report.examination}</span>
+                                <span className="text-[10px] font-bold text-indigo-700 bg-indigo-100 px-1.5 py-0.5 rounded ml-2 border border-indigo-200 uppercase">
+                                  {report.serviceType}
+                                </span>
+                                <p className="text-[10px] text-indigo-900 font-medium mt-0.5">
+                                  Report #{report.reportNumber} • Released on {new Date(report.reportDate).toLocaleString()} by <strong className="text-slate-900">{report.technicianName}</strong>
+                                </p>
+                              </div>
+
+                              <span className="bg-emerald-600 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">
+                                {report.status}
+                              </span>
+                            </div>
+
+                            {/* Report Content */}
+                            <div className="p-4 space-y-3">
+                              <div>
+                                <h5 className="text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-1">Clinical Findings</h5>
+                                <p className="text-slate-800 font-medium whitespace-pre-wrap leading-relaxed bg-slate-50 p-2.5 rounded border border-slate-200">
+                                  {report.clinicalFindings}
+                                </p>
+                              </div>
+
+                              <div>
+                                <h5 className="text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-1">Radiological Impression</h5>
+                                <p className="text-slate-900 font-bold whitespace-pre-wrap leading-relaxed bg-indigo-50/50 p-2.5 rounded border border-indigo-200 text-slate-900">
+                                  {report.impression}
+                                </p>
+                              </div>
+
+                              {report.recommendation && (
+                                <div>
+                                  <h5 className="text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-1">Recommendation</h5>
+                                  <p className="text-slate-700 italic bg-amber-50/50 p-2 rounded border border-amber-200">
+                                    {report.recommendation}
+                                  </p>
+                                </div>
+                              )}
+                            </div>
+                          </div>
+                        ))}
                       </div>
-                    ))}
+                    )}
                   </div>
                 )}
               </div>
             )}
+
           </div>
 
         </div>
