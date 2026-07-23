@@ -17,14 +17,17 @@ import {
   Truck,
   Pill,
   Calendar,
+  Heart,
+  Wind,
+  ShieldCheck,
 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Hospital Facilities & Services | LALA Medical Complex',
-  description: 'Explore 24/7 Emergency trauma bay, IPD private wards, major surgical operating suites, pathology labs, PACS radiology imaging, ICU/NICU, and ambulance services at LALA Medical Complex.',
+  title: 'Hospital Facilities & 13 Core Medical Services | LALA Medical Complex Rahim Yar Khan',
+  description: 'Providing standard medical treatment for 25+ years in Rahim Yar Khan. Pediatric Surgery, General Surgery, Obstetrics, Gynaecology, ENT, Urology, Orthopedics, Pathology Lab, Digital X-Ray, ECG, Nebulization, VIP Rooms, and 24/7 Pharmacy.',
   openGraph: {
-    title: 'Clinical Facilities | LALA Medical Complex',
-    description: '24/7 Emergency, Operation Theatres, Intensive Care Units, Pathology Lab & Digital PACS Radiology.',
+    title: 'Clinical Facilities & Medical Services | LALA Medical Complex',
+    description: '25+ Years of Healthcare Excellence in Rahim Yar Khan. Open 24 Hours 7 Days a Week.',
     type: 'website',
   },
 };
@@ -32,115 +35,164 @@ export const metadata: Metadata = {
 const FACILITIES_DATA: FacilityItem[] = [
   {
     id: 'f-1',
-    icon: PhoneCall,
-    title: '24/7 Emergency Care & Triage',
-    shortDesc: 'Round-the-clock emergency trauma response & resuscitation beds.',
-    fullDesc: 'Equipped with immediate resuscitation equipment, emergency surgery prep, and dedicated medical officers ready 24 hours a day, 7 days a week.',
+    icon: Scissors,
+    title: '1. Pediatric Surgery',
+    shortDesc: 'Specialized neonatal & child surgical procedures.',
+    fullDesc: 'Led by senior pediatric surgical faculty with 25+ years of clinical excellence in congenital deformity correction, neonatal emergencies, and pediatric abdominal surgeries.',
     features: [
-      '24/7 Emergency Medical Officers on Duty',
-      'Trauma Resuscitation & Oxygen Lines',
-      'Immediate Emergency Lab & Radiology Access',
+      'Neonatal & Infant Surgical Excellence',
+      'Pediatric Laparoscopic Surgery',
+      '24/7 Emergency Pediatric Intake',
     ],
-    badgeText: 'Open 24/7',
+    badgeText: 'Core Specialty',
   },
   {
     id: 'f-2',
-    icon: Stethoscope,
-    title: 'Outpatient Department (OPD Clinics)',
-    shortDesc: 'Multi-specialty doctor consultation clinics.',
-    fullDesc: 'Air-conditioned consultation chambers for senior professors, pediatric surgeons, gynecologists, orthopedic surgeons, and cardiologists.',
+    icon: Scissors,
+    title: '2. General Surgery',
+    shortDesc: 'Major & laparoscopic surgical procedures.',
+    fullDesc: 'Sterile operation theatres equipped with laparoscopic towers for appendectomy, cholecystectomy, hernia repair, and emergency trauma surgery.',
     features: [
-      'Multi-Specialty Specialist OPD Clinics',
-      'Computerized Token & Queue System',
-      'Integrated Digital Prescription (e-Rx)',
+      'Laparoscopic Minimal Access Surgery',
+      'Sterile OT Airflow & Monitoring',
+      'Post-Operative Recovery Ward',
     ],
   },
   {
     id: 'f-3',
-    icon: Bed,
-    title: 'Inpatient Wards & Private Rooms (IPD)',
-    shortDesc: 'Comfortable inpatient private rooms & general care wards.',
-    fullDesc: 'Equipped with patient monitoring beds, attached washrooms, dedicated nursing care, and round-the-clock doctor visits.',
+    icon: Stethoscope,
+    title: '3. Obstetrics',
+    shortDesc: 'Maternal health, pregnancy care & safe deliveries.',
+    fullDesc: 'Comprehensive antenatal care, high-risk pregnancy monitoring, normal vaginal deliveries, and 24/7 emergency C-section facilities.',
     features: [
-      'Private Executive Rooms & Wards',
-      '24/7 Inpatient Nursing & Doctor Care',
-      'Daily Vital Signs & Medication Rounds',
+      'High-Risk Pregnancy Management',
+      '24/7 Emergency C-Section Operating Unit',
+      'Fetal Heart Rate Monitoring',
     ],
   },
   {
     id: 'f-4',
-    icon: Scissors,
-    title: 'Sterile Operation Theatre Suites (OT)',
-    shortDesc: 'Advanced major & minor surgical operating suites.',
-    fullDesc: 'Equipped with shadowless operating lights, laparoscopic surgical towers, general anesthesia workstations, and sterile airflow.',
+    icon: Stethoscope,
+    title: '4. Gynaecology',
+    shortDesc: 'Complete women’s reproductive healthcare.',
+    fullDesc: 'Diagnosis and surgical management of gynecological disorders, pelvic pain, infertility consultations, and laparoscopic procedures.',
     features: [
-      'Laparoscopic Minimal Access Surgery',
-      'Neonatal & Pediatric Surgery Readiness',
-      'Autoclave & Sterilization Monitoring',
+      'Gynecological Consultation & Screening',
+      'Hysterectomy & Fibroid Surgeries',
+      'Female Healthcare Specialists',
     ],
-    badgeText: 'Surgical OT',
   },
   {
     id: 'f-5',
-    icon: FlaskConical,
-    title: 'Pathology & Diagnostic Laboratory',
-    shortDesc: 'Automated 24/7 pathology laboratory testing.',
-    fullDesc: 'Computerized analyzer systems for Hematology (CBC), Biochemistry (LFT/RFT), Urine RE, Blood Sugar, and Serology testing with fast turnaround times.',
+    icon: Activity,
+    title: '5. ENT (Ear, Nose & Throat)',
+    shortDesc: 'Otolaryngology consultations & surgeries.',
+    fullDesc: 'Comprehensive care for ear infections, sinus disorders, tonsillectomy, nasal septum correction, and throat ailments.',
     features: [
-      '24/7 Automated Blood & Chemistry Testing',
-      'Strict Quality Control & Standard Reference Ranges',
-      'Electronic Lab Report Delivery to EMR',
+      'Diagnostic Otoscopy & Endoscopy',
+      'Tonsil & Adenoid Surgeries',
+      'Sinus & Hearing Evaluation',
     ],
   },
   {
     id: 'f-6',
-    icon: FileText,
-    title: 'Digital Radiology & PACS Imaging',
-    shortDesc: 'High-definition Digital X-Ray & Ultrasound PACS.',
-    fullDesc: 'Features digital X-Ray (PA/AP views), High-Frequency Color Doppler Ultrasound, and CT Scan imaging linked directly to doctor workstations.',
+    icon: Activity,
+    title: '6. Urology',
+    shortDesc: 'Kidney, bladder & urinary tract care.',
+    fullDesc: 'Advanced treatment for kidney stones, prostate disorders, urinary infections, and endoscopic urological procedures.',
     features: [
-      'High-Resolution Digital X-Ray',
-      'Abdominal & Obstetric Color Doppler Ultrasound',
-      'Instant PACS Image Archiving & Viewing',
+      'Kidney Stone Treatment',
+      'Prostate & Bladder Care',
+      'Urinary Tract Diagnostics',
     ],
   },
   {
     id: 'f-7',
     icon: Activity,
-    title: 'Intensive Care Unit (ICU & Neonatal NICU)',
-    shortDesc: 'Specialized intensive care & infant incubator bay.',
-    fullDesc: 'High-dependency care unit equipped with cardiac monitors, oxygen delivery systems, and specialized incubators for newborn infants.',
+    title: '7. Orthopedics',
+    shortDesc: 'Bone, joint & trauma fracture surgery.',
+    fullDesc: 'Expert orthopedic surgeons handling bone fracture fixations, joint pain management, sports injuries, and spine evaluation.',
     features: [
-      'Neonatal Incubators & Phototherapy Units',
-      'Continuous Multi-Para Cardiac Monitors',
-      'Specialized ICU Nursing Ratio',
+      'Emergency Fracture Plaster & Surgery',
+      'Joint & Bone Trauma Care',
+      'Orthopedic Rehabilitation Support',
     ],
-    badgeText: 'Critical Care',
   },
   {
     id: 'f-8',
-    icon: Truck,
-    title: 'Emergency Ambulance Service',
-    shortDesc: 'Rapid patient transport & emergency transfer ambulance.',
-    fullDesc: 'Available 24/7 for patient transfer, emergency home response, and inter-hospital transport equipped with basic life support gear.',
+    icon: FlaskConical,
+    title: '8. Laboratory Services',
+    shortDesc: 'Automated 24/7 computerized pathology lab.',
+    fullDesc: 'Fully automated analyzers for Hematology (CBC), Biochemistry (LFT, RFT, FBS), Serology, Urine RE, and Blood Chemistry with immediate result entry to EMR.',
     features: [
-      '24/7 Dispatch Hotline',
-      'Oxygen & First Aid Life Support Onboard',
-      'Rapid Response Urban & Highway Transport',
+      '24/7 Automated Blood & Urine Testing',
+      'Strict Quality Control Standards',
+      'Instant EMR Report Archiving',
     ],
-    badgeText: '24/7 Transport',
+    badgeText: 'Open 24/7',
   },
   {
     id: 'f-9',
-    icon: Pill,
-    title: 'In-House Hospital Pharmacy',
-    shortDesc: 'Authentic hospital medicine supply & dispensing counter.',
-    fullDesc: 'Stocked with temperature-controlled pharmaceuticals, surgical consumables, antibiotics, and pediatric medication formulations.',
+    icon: FileText,
+    title: '9. Digital X-Ray & Ultrasound',
+    shortDesc: 'High-definition digital PACS diagnostic imaging.',
+    fullDesc: 'High-frequency digital X-Ray (AP/PA views) and Color Doppler Ultrasound for abdominal, pelvic, and obstetric diagnostic evaluation.',
     features: [
-      '100% Authentic Controlled Pharmaceuticals',
-      'Direct Prescription Dispensing',
-      'Inpatient Surgical Consumables Supply',
+      'Digital Radiography (X-Ray)',
+      'Abdominal & Pelvic Ultrasound',
+      'Instant PACS Radiologist Viewing',
     ],
+    badgeText: 'PACS Imaging',
+  },
+  {
+    id: 'f-10',
+    icon: Heart,
+    title: '10. ECG (Electrocardiogram)',
+    shortDesc: 'Cardiac diagnostic tracing & heart evaluation.',
+    fullDesc: '12-lead digital ECG recording for immediate cardiac evaluation, chest pain triage, and pre-operative cardiac clearance.',
+    features: [
+      '12-Lead Cardiac Tracing',
+      'Immediate Physician Evaluation',
+      '24/7 Cardiac Emergency Screening',
+    ],
+  },
+  {
+    id: 'f-11',
+    icon: Wind,
+    title: '11. Nebulization & Asthma Care',
+    shortDesc: 'Respiratory airway & aerosol therapy.',
+    fullDesc: 'Dedicated aerosol nebulization stations for pediatric and adult asthma, bronchitis, COPD, and acute respiratory distress.',
+    features: [
+      'Pediatric & Adult Airway Relief',
+      'Oxygen Therapy Lines',
+      '24/7 Acute Respiratory Triage',
+    ],
+  },
+  {
+    id: 'f-12',
+    icon: Bed,
+    title: '12. VIP Executive Rooms',
+    shortDesc: 'Comfortable, private inpatient accommodation.',
+    fullDesc: 'Air-conditioned VIP private rooms featuring attached washrooms, patient attendant seating, electric beds, and 24/7 nursing oversight.',
+    features: [
+      'Air-Conditioned VIP Suite Amenities',
+      '24/7 Nurse Call System & Doctor Visits',
+      'Attendant Seating & Quiet Environment',
+    ],
+    badgeText: 'VIP IPD',
+  },
+  {
+    id: 'f-13',
+    icon: Pill,
+    title: '13. 24/7 Pharmacy',
+    shortDesc: 'Authentic hospital medicine supply & dispensing.',
+    fullDesc: 'Stocked with temperature-controlled pharmaceuticals, surgical consumables, pediatric formulations, and emergency emergency life support drugs 24 hours a day.',
+    features: [
+      '100% Authentic Controlled Medicines',
+      '24/7 Dispensing Counter',
+      'Surgical Consumables & Antibiotics',
+    ],
+    badgeText: 'Open 24/7',
   },
 ];
 
@@ -151,7 +203,7 @@ export default function FacilitiesPage() {
       {/* Breadcrumbs */}
       <div className="bg-slate-100/70 border-b border-slate-200 py-3">
         <Container>
-          <Breadcrumbs items={[{ label: 'Hospital Facilities' }]} />
+          <Breadcrumbs items={[{ label: 'Hospital Facilities & Services' }]} />
         </Container>
       </div>
 
@@ -159,9 +211,9 @@ export default function FacilitiesPage() {
       <section className="py-12 sm:py-16 bg-white border-b border-slate-200">
         <Container className="space-y-10">
           <SectionTitle
-            tagline="Clinical Infrastructure"
-            title="Hospital Facilities & Diagnostic Services"
-            subtitle="Designed for patient safety, rapid emergency care, advanced surgical precision, and accurate diagnostic testing."
+            tagline="Standard Treatment for 25+ Years"
+            title="Hospital Facilities & 13 Core Medical Services"
+            subtitle="Providing trusted, high-quality healthcare treatment in Rahim Yar Khan for over 25 years. Open 24 Hours, 7 Days a Week."
             align="left"
           />
 
@@ -171,25 +223,29 @@ export default function FacilitiesPage() {
             ))}
           </div>
 
-          <div className="pt-8 text-center bg-slate-900 text-white rounded-2xl p-8 space-y-4 shadow-lg">
-            <h3 className="text-xl font-bold">Need More Information About Our Facilities?</h3>
-            <p className="text-xs text-slate-300 max-w-xl mx-auto leading-relaxed">
-              Our patient helpdesk is available 24/7 to answer questions regarding ward availability, diagnostic lab operating hours, or surgical bookings.
+          <div className="pt-8 text-center bg-slate-900 text-white rounded-2xl p-8 space-y-4 shadow-lg border border-slate-800">
+            <div className="inline-flex items-center gap-2 px-3 py-1 bg-teal-500/20 text-teal-300 rounded-full border border-teal-500/30 text-xs font-bold uppercase tracking-wider">
+              <ShieldCheck className="h-4 w-4 text-teal-400" />
+              <span>Standard Treatment for 25+ Years</span>
+            </div>
+            <h3 className="text-xl sm:text-2xl font-black">Open 24 Hours • 7 Days a Week</h3>
+            <p className="text-xs sm:text-sm text-slate-300 max-w-xl mx-auto leading-relaxed">
+              Our hospital emergency, laboratory, digital X-Ray, VIP rooms, and pharmacy operate round-the-clock at Basti Amanat Ali, Airport Road, Rahim Yar Khan.
             </p>
             <div className="pt-2 flex flex-wrap items-center justify-center gap-3">
               <Link
                 href="/book-appointment"
-                className="px-6 py-2.5 bg-teal-600 hover:bg-teal-500 text-white font-bold text-xs rounded-md shadow transition-colors inline-flex items-center gap-2"
+                className="px-6 py-3 bg-teal-500 hover:bg-teal-400 text-slate-950 font-black text-xs sm:text-sm rounded-xl shadow transition-colors inline-flex items-center gap-2"
               >
                 <Calendar className="h-4 w-4" />
-                <span>Book OPD Consultation</span>
+                <span>Book Appointment Online</span>
               </Link>
               <a
-                href="tel:+923001234567"
-                className="px-6 py-2.5 bg-white/10 hover:bg-white/20 text-white font-bold text-xs rounded-md transition-colors inline-flex items-center gap-2"
+                href="tel:+923006708300"
+                className="px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-bold text-xs sm:text-sm rounded-xl transition-colors inline-flex items-center gap-2"
               >
                 <PhoneCall className="h-4 w-4 text-teal-400" />
-                <span>Call Helpline: +92 300 1234567</span>
+                <span>Call Helpline: +92 300 6708300</span>
               </a>
             </div>
           </div>

@@ -11,6 +11,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: 'LALA Medical Complex HMS',
   description: 'Enterprise Hospital Management System for LALA Medical Complex',
+  icons: {
+    icon: '/icon.svg',
+    shortcut: '/icon.svg',
+    apple: '/icon.svg',
+  },
   robots: 'noindex, nofollow', // Clinical intranet apps do not require search indexation
 };
 

@@ -138,7 +138,7 @@ export default function PatientsPage() {
         age: apt.age,
         mobileNumber: result.patient.phone || apt.phone,
         address: apt.address,
-        city: 'Sargodha',
+        city: 'Rahim Yar Khan',
         isActive: true,
         isDeleted: false,
         createdAt: new Date().toISOString(),
@@ -167,7 +167,7 @@ export default function PatientsPage() {
   const [mobileNumber, setMobileNumber] = useState('');
   const [alternateMobileNumber, setAlternateMobileNumber] = useState('');
   const [address, setAddress] = useState('');
-  const [city, setCity] = useState('Sargodha');
+  const [city, setCity] = useState('Rahim Yar Khan');
   const [cnic, setCnic] = useState('');
   const [bloodGroup, setBloodGroup] = useState('Unknown');
   const [allergies, setAllergies] = useState('');
@@ -211,7 +211,7 @@ export default function PatientsPage() {
     setMobileNumber('');
     setAlternateMobileNumber('');
     setAddress('');
-    setCity('Sargodha');
+    setCity('Rahim Yar Khan');
     setCnic('');
     setBloodGroup('Unknown');
     setAllergies('');
@@ -245,7 +245,7 @@ export default function PatientsPage() {
         mobileNumber,
         alternateMobileNumber: alternateMobileNumber || undefined,
         address,
-        city: city || 'Sargodha',
+        city: city || 'Rahim Yar Khan',
         cnic: cnic || undefined,
         bloodGroup,
         allergies: allergies || undefined,
@@ -801,7 +801,7 @@ export default function PatientsPage() {
                         type="text"
                         value={city}
                         onChange={(e) => setCity(e.target.value)}
-                        placeholder="Sargodha"
+                        placeholder="Rahim Yar Khan"
                         className="w-full mt-1 px-3 py-2 text-sm border border-slate-200 rounded-md outline-none focus:border-teal-500"
                       />
                     </div>

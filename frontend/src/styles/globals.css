@@ -110,3 +110,49 @@
     margin-bottom: 1rem !important;
   }
 }
+
+/* Hero Entrance Animations on Page Load / Reload */
+@keyframes heroFadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-36px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes heroFadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(36px) scale(0.97);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes heroFadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-hero-left {
+  animation: heroFadeInLeft 0.85s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.animate-hero-right {
+  animation: heroFadeInRight 1s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
+}
+
+.animate-hero-up {
+  animation: heroFadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+}

@@ -28,7 +28,7 @@ export const createPatientSchema = z.object({
     }),
   alternateMobileNumber: z.string().optional().or(z.literal('')),
   address: z.string().min(1, 'Address is required'),
-  city: z.string().min(1, 'City is required').default('Sargodha'),
+  city: z.string().min(1, 'City is required').default('Rahim Yar Khan'),
   cnic: z
     .string()
     .optional()

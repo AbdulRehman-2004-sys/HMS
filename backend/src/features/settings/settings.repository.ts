@@ -8,8 +8,8 @@ export const mockHospitalSettings: HospitalSettingsDTO = {
   id: 'set-default-001',
   hospitalName: 'LALA Medical Complex',
   hospitalLogo: null,
-  address: 'Main Stadium Road, Sargodha, Punjab, Pakistan',
-  contactNumber: '+92 300 1234567',
+  address: 'Basti Amanat Ali, Airport Road, near Decent Bakers, Rahim Yar Khan, Punjab, Pakistan',
+  contactNumber: '+92 300 6708300',
   email: 'info@lalamedical.com',
   updatedAt: new Date(),
 };
@@ -27,8 +27,8 @@ export class SettingsRepository {
           id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
           hospital_name VARCHAR(255) NOT NULL DEFAULT 'LALA Medical Complex',
           hospital_logo TEXT,
-          address TEXT NOT NULL DEFAULT 'Main Stadium Road, Sargodha, Punjab, Pakistan',
-          contact_number VARCHAR(50) NOT NULL DEFAULT '+92 300 1234567',
+          address TEXT NOT NULL DEFAULT 'Basti Amanat Ali, Airport Road, near Decent Bakers, Rahim Yar Khan, Punjab, Pakistan',
+          contact_number VARCHAR(50) NOT NULL DEFAULT '+92 300 6708300',
           email VARCHAR(255) DEFAULT 'info@lalamedical.com',
           created_at TIMESTAMP NOT NULL DEFAULT NOW(),
           updated_at TIMESTAMP NOT NULL DEFAULT NOW()
@@ -56,8 +56,8 @@ export class SettingsRepository {
             .values({
               hospitalName: 'LALA Medical Complex',
               hospitalLogo: null,
-              address: 'Main Stadium Road, Sargodha, Punjab, Pakistan',
-              contactNumber: '+92 300 1234567',
+              address: 'Basti Amanat Ali, Airport Road, near Decent Bakers, Rahim Yar Khan, Punjab, Pakistan',
+              contactNumber: '+92 300 6708300',
               email: 'info@lalamedical.com',
             })
             .returning();

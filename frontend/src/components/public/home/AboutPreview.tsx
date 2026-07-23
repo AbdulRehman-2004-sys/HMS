@@ -28,12 +28,12 @@ export const AboutPreview: React.FC = () => {
 
               <div className="grid grid-cols-2 gap-4 pt-4 border-t border-slate-800 text-center">
                 <div className="bg-slate-800/60 p-3 rounded-lg border border-slate-700">
-                  <span className="block text-2xl font-extrabold text-teal-400">11+</span>
-                  <span className="text-[11px] font-medium text-slate-400">Senior Consultants</span>
+                  <span className="block text-2xl font-extrabold text-teal-400">25+ Yrs</span>
+                  <span className="text-[11px] font-medium text-slate-400">Standard Treatment</span>
                 </div>
                 <div className="bg-slate-800/60 p-3 rounded-lg border border-slate-700">
-                  <span className="block text-2xl font-extrabold text-teal-400">24/7</span>
-                  <span className="text-[11px] font-medium text-slate-400">Emergency & ICU</span>
+                  <span className="block text-2xl font-extrabold text-teal-400">Open 24/7</span>
+                  <span className="text-[11px] font-medium text-slate-400">Emergency & IPD</span>
                 </div>
               </div>
             </div>

@@ -138,48 +138,53 @@
   - Implemented one-click Reception Check-In workflow: reuses existing patient MR Number or creates new patient (`MRN-YYYYMMDD-XXXX`), generates Queue Token (`Q-XXX`), creates `patient_visits` entry, pops up printable `RegistrationSlip` modal, and queues patient into doctor's consultation view.
   - Verified zero TypeScript compilation errors across backend and frontend workspaces.
 
+- Completed **Contact & Miscellaneous Pages Module** (Phase 18 — Ticket 22):
+  - Built reusable public components under `frontend/src/components/public/contact/`: `ContactCard.tsx`, `EmergencyNumbers.tsx`, `OpeningHoursTable.tsx`, `GoogleMapSection.tsx`, `FaqAccordion.tsx`, and `InfoCard.tsx`.
+  - Refactored Contact Us page (`/contact`) with official hospital address, helpline, email, emergency numbers section with clickable `tel:` links, opening hours table, interactive Google Maps embed for Sargodha, quick booking CTAs, and OpenGraph SEO metadata.
+  - Built dedicated FAQ page (`/faq`) featuring keyboard-accessible (`aria-expanded`, `aria-controls`, `role="button"`) interactive `FaqAccordion` component, answers to core patient queries (Appointment booking, Hospital timings, Finding a doctor, Location, Services, What to bring), helpline callout, and OpenGraph SEO metadata.
+  - Enhanced Privacy Policy page (`/privacy-policy`) with structured compliance sections: Information We Collect, How We Use Information, Data Protection & EMR Security, Cookies & Local Storage, Third-Party Services, and Patient Data Request Contacts.
+  - Updated `PublicNavbar.tsx` and `PublicFooter.tsx` with FAQ links and updated Next.js `sitemap.ts` with `/faq` route.
+  - Verified zero TypeScript compilation errors across backend and frontend workspaces.
+
 ## Current Ticket
-- **Phase 17 - Ticket 21:** Online Appointment System (COMPLETED).
+- **Phase 18 - Ticket 22:** Contact & Miscellaneous Pages (COMPLETED).
 
 ## Current Progress
-- [x] Create backend appointments table schema (`appointments.schema.ts`).
-- [x] Create backend DTOs, Zod schemas, repository, service, and controllers.
-- [x] Create public booking endpoint `POST /api/public/appointments`.
-- [x] Create protected reception endpoints `GET /api/appointments/pending` & `POST /api/appointments/:id/checkin`.
-- [x] Create frontend client wrapper `appointments.ts`.
-- [x] Create public booking page `/book-appointment` with form validation & confirmation modal.
-- [x] Create **Online Pending Check-ins** tab in HMS Reception Dashboard (`/dashboard/patients`).
-- [x] Implement reception Check-In workflow with patient MRN reuse/creation, Queue Token generation, Registration Slip modal, and doctor EMR queue placement.
+- [x] Create reusable contact components (`ContactCard`, `EmergencyNumbers`, `OpeningHoursTable`, `GoogleMapSection`, `FaqAccordion`, `InfoCard`).
+- [x] Update Contact Us page (`/contact`) with location, map embed, emergency links, opening hours, and appointment links.
+- [x] Create dedicated FAQ page (`/faq`) with interactive keyboard-accessible accordion.
+- [x] Update Privacy Policy page (`/privacy-policy`) with structured data protection sections.
+- [x] Update `PublicNavbar` and `PublicFooter` with FAQ links.
+- [x] Update Next.js `sitemap.ts` with `/faq`.
 - [x] Run automated TypeScript type-checks (`npm run type-check`) for backend & frontend (zero errors).
 - [x] Update `Memory.md` and create `walkthrough.md`.
 
 ## Files Created / Modified
 
-### Backend:
-- `[NEW]` [appointments.schema.ts](file:///g:/lala%20complex/backend/src/features/appointments/appointments.schema.ts) — Appointments database table schema.
-- `[NEW]` [appointments.types.ts](file:///g:/lala%20complex/backend/src/features/appointments/appointments.types.ts) — DTOs & TypeScript interfaces.
-- `[NEW]` [appointments.validation.ts](file:///g:/lala%20complex/backend/src/features/appointments/appointments.validation.ts) — Zod validation schemas.
-- `[NEW]` [appointments.repository.ts](file:///g:/lala%20complex/backend/src/features/appointments/appointments.repository.ts) — DB & mock repository for appointments.
-- `[NEW]` [appointments.service.ts](file:///g:/lala%20complex/backend/src/features/appointments/appointments.service.ts) — Booking logic & check-in patient reuse/creation workflow.
-- `[NEW]` [appointments.controller.ts](file:///g:/lala%20complex/backend/src/features/appointments/appointments.controller.ts) — Protected reception routes.
-- `[MODIFY]` [public.controller.ts](file:///g:/lala%20complex/backend/src/features/public/public.controller.ts) — Public `POST /api/public/appointments` booking endpoint.
-- `[MODIFY]` [schema.ts](file:///g:/lala%20complex/backend/src/db/schema.ts) — Exported appointments schema.
-- `[MODIFY]` [app.ts](file:///g:/lala%20complex/backend/src/app.ts) — Mounted `/api/appointments` router.
-
 ### Frontend:
-- `[NEW]` [appointments.ts](file:///g:/lala%20complex/frontend/src/lib/appointments.ts) — Client API functions for booking and check-in.
-- `[NEW]` [page.tsx (Book Appointment)](file:///g:/lala%20complex/frontend/src/app/book-appointment/page.tsx) — Public online appointment booking page with form validation & confirmation modal.
-- `[MODIFY]` [page.tsx (Patients Dashboard)](file:///g:/lala%20complex/frontend/src/app/dashboard/patients/page.tsx) — Added **Online Pending Check-ins** tab and one-click reception check-in workflow.
+- `[NEW]` [ContactCard.tsx](file:///g:/lala%20complex/frontend/src/components/public/contact/ContactCard.tsx) — Reusable contact card component.
+- `[NEW]` [EmergencyNumbers.tsx](file:///g:/lala%20complex/frontend/src/components/public/contact/EmergencyNumbers.tsx) — Clickable `tel:` emergency hotlines section.
+- `[NEW]` [OpeningHoursTable.tsx](file:///g:/lala%20complex/frontend/src/components/public/contact/OpeningHoursTable.tsx) — Hospital schedule table.
+- `[NEW]` [GoogleMapSection.tsx](file:///g:/lala%20complex/frontend/src/components/public/contact/GoogleMapSection.tsx) — Google Maps iframe embed & directions button.
+- `[NEW]` [FaqAccordion.tsx](file:///g:/lala%20complex/frontend/src/components/public/contact/FaqAccordion.tsx) — Accessible FAQ accordion component.
+- `[NEW]` [InfoCard.tsx](file:///g:/lala%20complex/frontend/src/components/public/contact/InfoCard.tsx) — Reusable informational card component.
+- `[NEW]` [page.tsx (FAQ)](file:///g:/lala%20complex/frontend/src/app/faq/page.tsx) — Dedicated FAQ page with accordion and helpline callout.
+- `[MODIFY]` [page.tsx (Contact)](file:///g:/lala%20complex/frontend/src/app/contact/page.tsx) — Refactored Contact Us page with map, hotlines, timings, and CTAs.
+- `[MODIFY]` [page.tsx (Privacy Policy)](file:///g:/lala%20complex/frontend/src/app/privacy-policy/page.tsx) — Enhanced Privacy Policy page with structured sections.
+- `[MODIFY]` [PublicNavbar.tsx](file:///g:/lala%20complex/frontend/src/components/public/PublicNavbar.tsx) — Added FAQ link to navigation.
+- `[MODIFY]` [PublicFooter.tsx](file:///g:/lala%20complex/frontend/src/components/public/PublicFooter.tsx) — Added FAQ link to footer quick links.
+- `[MODIFY]` [sitemap.ts](file:///g:/lala%20complex/frontend/src/app/sitemap.ts) — Added `/faq` route to SEO sitemap.
 
 ## Known Issues
 - None.
 
 ## Next Ticket
+- Next phase / ticket as assigned.
 
 ## Pending Work
-- Online appointment booking UI & workflow integration with doctor schedules.
+- None.
 
 ## Architecture Decisions
-- **API-First Single Source of Truth**: Public website fetches doctor & department data directly from the HMS backend database (`doctors` & `doctor_availabilities` tables). No duplicate static doctor mock files are maintained.
-- **Readable Slug Routing**: Doctors and departments use clean, SEO-friendly slug parameters (`/doctors/dr-zafar-iqbal`, `/departments/pediatric-surgery`) with fallback to UUIDs.
-- **Schedule Readiness**: `DoctorProfile` extracts doctor availabilities directly from `doctor_availabilities` table, preparing the system for direct slot selection in Ticket 21.
+- **Accessible Accordion Component**: `FaqAccordion` implements WAI-ARIA standards with `aria-expanded`, `aria-controls`, and `onKeyDown` handlers for `Enter` and `Space` key interaction.
+- **Clickable Mobile Telephony**: Emergency numbers wrap in native `tel:` URI schemes so users on mobile devices can immediately trigger calls.
+- **Modular Component Primitives**: All contact elements (Cards, Emergency section, Timings table, Map section) are self-contained reusable components in `frontend/src/components/public/contact/`.

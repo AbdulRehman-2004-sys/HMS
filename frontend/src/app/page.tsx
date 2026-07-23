@@ -11,7 +11,7 @@ import { CtaBanner } from '../components/public/home/CtaBanner';
 
 export const metadata: Metadata = {
   title: 'LALA Medical Complex | Tertiary Care Hospital & Pediatric Surgery Center',
-  description: 'LALA Medical Complex provides advanced pediatric surgery, maternal care, 24/7 ICU & emergency trauma care, computerized pathology labs, and digital PACS radiology imaging in Sargodha.',
+  description: 'LALA Medical Complex provides advanced pediatric surgery, maternal care, 24/7 ICU & emergency trauma care, computerized pathology labs, and digital PACS radiology imaging in Rahim Yar Khan.',
   openGraph: {
     title: 'LALA Medical Complex | Tertiary Care Hospital',
     description: 'Advanced medical care, 24/7 emergency response, expert pediatric surgeons, and digital diagnostic imaging.',

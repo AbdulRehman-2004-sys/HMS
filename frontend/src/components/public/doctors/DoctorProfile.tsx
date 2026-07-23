@@ -118,7 +118,7 @@ export const DoctorProfile: React.FC<DoctorProfileProps> = ({ doctor }) => {
                 <span>Book OPD Appointment</span>
               </Link>
               <a
-                href="tel:+923001234567"
+                href="tel:+923006708300"
                 className="px-6 py-3 bg-white/10 hover:bg-white/20 text-white font-bold text-xs sm:text-sm rounded-xl transition-colors inline-flex items-center gap-2"
               >
                 <PhoneCall className="h-4 w-4 text-teal-400" />

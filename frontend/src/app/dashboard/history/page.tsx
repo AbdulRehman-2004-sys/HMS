@@ -223,7 +223,7 @@ export default function PatientHistoryPage() {
                 {hospitalSettings?.hospitalName || 'LALA MEDICAL COMPLEX'}
               </h1>
               <p className="text-xs font-semibold text-slate-700 mt-0.5">
-                {hospitalSettings?.address || 'Main Stadium Road, Sargodha, Punjab, Pakistan'} • Ph: {hospitalSettings?.contactNumber || '+92 300 1234567'}
+                {hospitalSettings?.address || 'Basti Amanat Ali, Airport Road, near Decent Bakers, Rahim Yar Khan, Punjab, Pakistan'} • Ph: {hospitalSettings?.contactNumber || '+92 300 6708300'}
               </p>
               <p className="text-xs font-bold text-slate-900 uppercase tracking-widest mt-1">
                 CONFIDENTIAL PATIENT MEDICAL HISTORY REPORT

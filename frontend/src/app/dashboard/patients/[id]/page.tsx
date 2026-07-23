@@ -93,7 +93,7 @@ export default function PatientDetailPage() {
   const [editMobileNumber, setEditMobileNumber] = useState('');
   const [editAlternateMobileNumber, setEditAlternateMobileNumber] = useState('');
   const [editAddress, setEditAddress] = useState('');
-  const [editCity, setEditCity] = useState('Sargodha');
+  const [editCity, setEditCity] = useState('Rahim Yar Khan');
   const [editCnic, setEditCnic] = useState('');
   const [editBloodGroup, setEditBloodGroup] = useState('Unknown');
   const [editAllergies, setEditAllergies] = useState('');
@@ -132,7 +132,7 @@ export default function PatientDetailPage() {
       setEditMobileNumber(patient.mobileNumber);
       setEditAlternateMobileNumber(patient.alternateMobileNumber || '');
       setEditAddress(patient.address);
-      setEditCity(patient.city || 'Sargodha');
+      setEditCity(patient.city || 'Rahim Yar Khan');
       setEditCnic(patient.cnic || '');
       setEditBloodGroup(patient.bloodGroup || 'Unknown');
       setEditAllergies(patient.allergies || '');
@@ -166,7 +166,7 @@ export default function PatientDetailPage() {
         mobileNumber: editMobileNumber,
         alternateMobileNumber: editAlternateMobileNumber || undefined,
         address: editAddress,
-        city: editCity || 'Sargodha',
+        city: editCity || 'Rahim Yar Khan',
         cnic: editCnic || undefined,
         bloodGroup: editBloodGroup,
         allergies: editAllergies || undefined,

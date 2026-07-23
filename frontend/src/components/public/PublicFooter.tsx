@@ -25,9 +25,9 @@ export const PublicFooter: React.FC = () => {
 
   const hospitalName = hospitalSettings?.hospitalName || 'LALA Medical Complex';
   const hospitalLogo = hospitalSettings?.hospitalLogo || null;
-  const contactPhone = hospitalSettings?.contactNumber || '+92 300 1234567';
+  const contactPhone = hospitalSettings?.contactNumber || '+92 300 6708300';
   const contactEmail = hospitalSettings?.email || 'info@lalamedical.com';
-  const hospitalAddress = hospitalSettings?.address || 'Main Stadium Road, Sargodha, Punjab, Pakistan';
+  const hospitalAddress = hospitalSettings?.address || 'Basti Amanat Ali, Airport Road, near Decent Bakers, Rahim Yar Khan, Punjab, Pakistan';
 
   return (
     <footer className="bg-slate-900 text-slate-300 pt-12 pb-6 border-t-4 border-teal-600">
@@ -80,6 +80,7 @@ export const PublicFooter: React.FC = () => {
                 { name: 'Medical Departments', href: '/departments' },
                 { name: 'Book Appointment', href: '/book-appointment' },
                 { name: 'Contact & Helpline', href: '/contact' },
+                { name: 'FAQ & Help', href: '/faq' },
                 { name: 'Privacy Policy', href: '/privacy-policy' },
               ].map((link) => (
                 <li key={link.href}>

@@ -200,8 +200,8 @@ async function seedDatabase() {
       await db.insert(hospitalSettings).values({
         hospitalName: 'LALA Medical Complex',
         hospitalLogo: null,
-        address: 'Main Stadium Road, Sargodha, Punjab, Pakistan',
-        contactNumber: '+92 300 1234567',
+        address: 'Basti Amanat Ali, Airport Road, near Decent Bakers, Rahim Yar Khan, Punjab, Pakistan',
+        contactNumber: '+92 300 6708300',
         email: 'info@lalamedical.com',
       });
       logger.info('Created central hospital settings profile.');

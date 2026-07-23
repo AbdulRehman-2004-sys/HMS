@@ -14,7 +14,7 @@ export const patients = pgTable('patients', {
   mobileNumber: varchar('mobile_number', { length: 20 }).notNull(),
   alternateMobileNumber: varchar('alternate_mobile_number', { length: 20 }),
   address: text('address').notNull(),
-  city: varchar('city', { length: 100 }).notNull().default('Sargodha'),
+  city: varchar('city', { length: 100 }).notNull().default('Rahim Yar Khan'),
   cnic: varchar('cnic', { length: 20 }),
   bloodGroup: varchar('blood_group', { length: 10 }), // 'A+' | 'A-' | 'B+' | 'B-' | 'O+' | 'O-' | 'AB+' | 'AB-' | 'Unknown'
   allergies: text('allergies'),

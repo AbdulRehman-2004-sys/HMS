@@ -69,7 +69,7 @@ export class ReportsRepository {
           age: p.age ?? null,
           gender: p.gender,
           mobileNumber: p.mobileNumber,
-          city: p.city || 'Sargodha',
+          city: p.city || 'Rahim Yar Khan',
           createdAt: p.createdAt || new Date(),
         });
       });

@@ -536,7 +536,7 @@ export default function BillingDashboardPage() {
                   {hospitalSettings?.hospitalName || 'LALA MEDICAL COMPLEX'}
                 </h2>
                 <p className="text-[10px] text-slate-600">
-                  {hospitalSettings?.address || 'Main Stadium Road, Sargodha, Punjab'} • Ph: {hospitalSettings?.contactNumber || '+92 300 1234567'}
+                  {hospitalSettings?.address || 'Basti Amanat Ali, Airport Road, near Decent Bakers, Rahim Yar Khan, Punjab'} • Ph: {hospitalSettings?.contactNumber || '+92 300 6708300'}
                 </p>
                 <p className="text-[10px] font-bold text-slate-800 border-t border-b border-slate-900 py-1 my-1 uppercase">
                   OFFICIAL PAYMENT RECEIPT
